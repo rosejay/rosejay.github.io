@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Visualization of an Eye Tracker Experiment</title>
+		<meta name="description" content="Visualization of an Eye Tracker Experiment">
+		<meta name="generator" content="">
+		<meta name="author" content="Ye Lin">
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/site.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<!-- LESS -->
+		<link rel="stylesheet/less" type="text/css" href="css/style.less" />
+		<script type="text/javascript" src="js/less.js"></script>
+
+		<!-- Javascript Lib -->
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/lib/arbor.js"></script>
+		<script type="text/javascript" src="js/lib/arbor-tween.js"></script>
+		<script type="text/javascript" src="js/lib/arbor-graphics.js"></script>
+		<script type="text/javascript" src="js/raphael-min.js"></script>
+
+				
+		<script type="text/javascript" src="js/ocanvas-2.4.0.js"></script>
+
+	</head>
+	<body>
+		<div id="arbor">
+			<div id="nav">
+				<a class="back" href="#"></a>
+				<p style="opacity: 1; display: block;">Eye Tracker Experiment</p>
+			</div>
+			<div class="loading">Loading...</div>
+			<canvas id="sitemap" width="1242" height="357" style="opacity: 1;" class=""></canvas>
+
+			<div id="docs" style="opacity: 0; display: none;">
+				<div id="overall">
+					<div class="overall">
+
+						<div class="chart">
+							<div class="people-chart mychart">
+								<h3>9 Participants</h3>
+								<ul class="person"></ul>
+								<ul class="frequency"></ul>
+								<div class="notes">
+									<p></p>
+									<span class="arrow top"></span>
+								</div>
+								<p class="people-legend">Tablet Use Frequency</p>
+							</div>
+							<div class="article-chart mychart">
+								<h3>3 Articles</h3>
+								<div class="article-legend">
+									<p class="article1">Park<span></span></p>
+									<p class="article2">Graffiti<span></span></p>
+									<p class="article3">Hammer<span></span></p>
+								</div>
+								<ul class="article"></ul>
+								<div class="notes">
+									<p>Same Difficulty</p>
+									<span class="arrow right"></span>
+								</div>
+							</div>
+
+							<div class="task-chart mychart">
+								<h3>3 Tasks</h3>
+								<div class="task-legend">
+									<p class="task1">Basic<span></span></p>
+									<p class="task2">Sitting<span></span></p>
+									<p class="task3">Working<span></span></p>
+								</div>
+								<ul class="task"></ul>
+								<div class="notes">
+									<p>Randomization</p>
+									<span class="arrow left"></span>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="block">
+
+							<div class="mydata">
+								<h3 class="resultTitle">Data</h3>
+								<div class="isData-legend mymylegend">
+									<p class="valid">Valid <em></em><span></span></p>
+									<p class="manual">Manual <em></em><span></span></p>
+									<p class="time">Time <em></em><span></span></p>
+									<p class="invalid">Invalid <em></em><span></span></p>
+								</div>
+								<ul class="isDataChart">
+
+								</ul>
+								<div class="clear"></div>
+							</div>
+							<div class="result1">
+								<h3 class="resultTitle">Reading Comprehension</h3>
+								<div class="boxChart-legend">
+									<ul>
+										<li class="color5"><p>5<span></span></p></li>
+										<li class="color4"><p>4<span></span></p></li>
+										<li class="color3"><p>3<span></span></p></li>
+										<li class="color2"><p>2<span></span></p></li>
+										<li class="color1"><p>1<span></span></p></li>
+										<li class="gray"><p>Average<span></span></p></li>
+										<li class="blank"></li>
+										<li class="task1"><p>Basic<span></span></p></li>
+										<li class="task2"><p>Sitting<span></span></p></li>
+										<li class="task3"><p>Walking<span></span></p></li>
+										<li class="blank"></li>
+										<div class="showArticle dis">
+											<li class="article1"><p>Park<span></span></p></li>
+											<li class="article2"><p>Graffiti<span></span></p></li>
+											<li class="article3"><p>Hammer<span></span></p></li>
+										</div>
+										
+
+
+									</ul>
+									
+								</div>
+								<ul class="boxChart">
+
+								</ul>
+								<div class="clear"></div>
+							</div>
+
+							<div clss="clear"></div>
+
+						</div>
+
+						<div class="result2">
+							<h3 class="resultTitle">Data Analysis</h3>
+							<div id="datadiv"></div>
+							<ul class="choose-bar">
+								<li class="fix">
+									<p><span></span>Fixation %</p>
+								</li>
+								<li class="sac cur">
+									<p><span></span>Saccade %</p>
+								</li>
+								<li class="total">
+									<p><span></span>Overall Time s</p>
+								</li>
+								<li class="score">
+									<p><span></span>Score </p>
+								</li>
+								<div class="backgroundBox sac">
+									<span class="arrow left bottom"></span>
+									<span class="arrow left"></span>
+								</div>
+								<li class="blank"></li>
+								<li class="task1 stat"><p><span></span>Basic</p></li>
+								<li class="task2 stat"><p><span></span>Sitting</p></li>
+								<li class="task3 stat"><p><span></span>Walking</p></li>
+							</ul>
+							<div clss="clear"></div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+				</div>
+				<div id="comparison">
+
+					<div class="testerBox">
+				        <canvas id="threecanvas" width="600" height="450"></canvas>
+
+				        <div class="testerRight">
+				          <h3>Tester - <span></span></h3>
+				          <ul>
+				            <li class="task1" index="0"><p><span></span>Basic</p></li>
+				            <li class="task2" index="1"><p><span></span>Sitting</p></li>
+				            <li class="task3" index="2"><p><span></span>Walking</p></li>
+				          </ul>
+				          <div class="timeBox">
+				            <div class="tester-playbtn2 stop"></div>
+				            <p class="testerFrame"></p>
+				            <p class="testerTime"></p>
+				          </div>
+				          
+				        </div>
+				          
+				    </div>
+
+				</div>
+				<div id="tester">
+					
+					<div class="testerBox">
+				        <canvas id="ipadcanvas" width="640" height="480"></canvas>
+
+				        <div class="testerRight">
+				          <h3>Tester - <span></span></h3>
+				          <ul>
+				            <li class="task1" index="0"><p><span></span>Basic</p></li>
+				            <li class="task2" index="1"><p><span></span>Sitting</p></li>
+				            <li class="task3" index="2"><p><span></span>Walking</p></li>
+				          </ul>
+				          <div class="timeBox">
+				            <div class="tester-playbtn stop"></div>
+				            <p class="testerFrame"></p>
+				            <p class="testerTime"></p>
+				          </div>
+				          
+				        </div>
+				          
+				      </div>
+
+
+				</div>
+				<div id="experiment">
+
+					<div class="main">
+						<div class="dataArea fl">
+							<img id="sourceImg" src=""/>
+							<canvas id="experimentcanvas" width="600" height="450"></canvas>
+						</div>
+						<div class="dataChart fl">
+
+
+							<h3 id="title"></h3>
+							<div class="mylegend">
+								<ul>
+									
+									<li>
+										<p class="rect fix"><em></em><span>Fixation</span></p> 
+										<p class="total fix"> <span class="avg"></span>
+											<span class="data">
+												<span class="data-title">Avg.</span>
+												<span class="data-num"></span>
+											</span>
+										</p>
+										<p class="perc fix">
+											<span class="data-perc"></span>
+											<span class="data-time"></span>
+										</p>
+										
+									</li>
+									<li>
+										<p class="rect sac"><em></em><span>Saccade</span></p>
+										<p class="total sac"> <span class="avg"></span>
+											<span class="data">
+												<span class="data-title">Avg.</span>
+												<span class="data-num"></span>
+											</span>
+										</p>
+										<p class="perc sac">
+											<span class="data-perc"></span>
+											<span class="data-time"></span>
+										</p>
+									</li>
+									<li>
+										<p class="rect red"><em></em><span>Out View</span></p>
+										<p class="total red">
+										</p>
+										<p class="perc red">
+											<span class="data-perc"></span>
+											<span class="data-time"></span>
+										</p>
+									</li>
+
+									<li class="t-20">
+										<p class="rect gray"><span>CaliData</span></p>
+										<p class="total gray"> 
+										</p>
+										<p class="perc gray">
+											<span class="data-perc"></span>
+											<span class="data-time"></span>
+										</p>
+									</li>
+								</ul>
+							</div>
+							<div class="clear"></div>
+							<div class="playBar">
+								<div class="play playbtn fl"></div>
+								<div class="FrameControl fl">
+									<!--<p class="checkFrame"><span></span>by Frame</p>-->
+									<div class="checkFrameDiv">
+										<p class="s">0</p>
+										<p class="e">50</p>
+										<p class="c">20</p>
+										<div class="slot">
+											<div class="slider"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="timeline">
+
+						<p class="up first-frame"></p>
+						<p class="up last-frame"></p>
+						<p class="down first-frame"></p>
+						<p class="down last-frame"></p>
+						<div class="timeData up">
+							
+							<p class="first"></p>
+							<p class="center"> - { <span></span> } - </p>
+							<p class="last"></p>
+							
+						</div>
+						<div class="zoom lines">
+							<ul></ul>
+							<canvas id="bigCanvas"></canvas>
+						</div>
+
+						<div class="lines normal">
+							<!--<ul></ul>-->
+							<canvas id="smallCanvas"></canvas>
+							<div class="overlay-box">
+								<div id="midControl-l" class="midcontrol left fl"></div>
+								<div id="midControl" class="midcontrol mid fl"></div>
+								<div id="midControl-r" class="midcontrol left fl"></div>
+								<div class="clear"></div>
+							</div>
+							
+							<div id="leftControl" class="control br5 left"><p></p></div>
+							<div id="rightControl" class="control br5 right"><p></p></div>
+						</div>
+
+						<div class="timeData down">
+							<p class="first"></p>
+							<p class="last"></p>
+						</div>
+						
+						<div class="frameTip">
+							<p>hello world!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="js/data.js"></script>
+		<script type="text/javascript" src="js/overall.js"></script>
+		<script type="text/javascript" src="js/tester.js"></script>
+		<script type="text/javascript" src="js/tester2.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/controller.js"></script>
+		<script type="text/javascript" src="js/site.js"></script>
+
+
+	</body>
+</html>

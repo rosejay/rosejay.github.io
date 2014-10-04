@@ -1,0 +1,567 @@
+
+
+@bodywidth: 1000px;
+// retina.less
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+
+@highdpi: ~"(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)";
+
+.at2x(@path, @w: auto, @h: auto) {
+	background-image: url(@path);
+	@at2x_path: ~`@{path}.replace(/\.\w+$/, function(match) { return "@2x" + match; })`;
+
+	@media @highdpi {
+		background-image: url("@{at2x_path}");
+		background-size: @w @h;
+	}
+}
+
+
+
+@linkColor: #aaa;
+@linkHoverColor: #f55b2c;
+a, a:visited{
+	color: @linkColor;
+}
+a:hover{
+	color: @linkHoverColor;
+}
+
+@educationColor: #656D78;
+@selfColor: #A0D468;
+@internColor: #48CFAD;
+@masterColor: #4FC1E9;
+@bachelorColor: #5D9CEC;
+
+@awardsColor: #ED5565;
+@publishColor: #FFCE54;
+@skillsColor: #FC6E51;
+
+@specialFont: 'Patua One', cursive;
+
+body{
+
+	position: relative;
+	line-height: 1.5em;
+	word-wrap: break-word;
+	width: 1000px;
+	margin: 0 auto;
+
+	.page-head{
+		width: 160px;
+		margin-top: 50px;
+		line-height: 30px;
+		text-align: center;
+		padding-bottom: 5px;
+		h3{
+			font-size: 36px;
+			line-height: 20px;
+			font-weight: bold;
+			font-family: @specialFont;
+			span{
+				font-size: 12px;
+				letter-spacing: 9px;
+				padding-left: 12px;
+				font-weight: normal;
+				padding-bottom: 5px;
+			}
+		}
+	}
+	header.center{
+		margin-bottom: 5px;
+	}
+
+}
+
+
+.instruction{
+	width: 600px;
+	height: 40px;
+	padding: 10px 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	margin: 0 auto;
+	ul{
+		li{
+			width: 150px;
+			float: left;
+			.mark{
+				float: left;
+			}
+			p.des{
+				float: left;
+				display: inline-block;
+				line-height: 40px;
+				padding-left: 10px;
+			}
+		}
+	}
+
+
+}
+
+
+
+@centerTextWidth:600px;
+@yearTextWidth: 50px;
+@yearTextHeight: 20px;
+//@yearColor: #5bc6d0;
+@yearColor: #ccc;
+@darkBlack: #333;
+@midBlack: #999;
+@lightBlack: #ccc;
+@superlightBlack: #f8f8f8;
+
+@portfolioWidth: 600px;
+@portfolioHeight: 450px;
+@portfolioPadding: 20px;
+
+.time.year{
+	width: @yearTextWidth;
+	height: @yearTextHeight;
+	line-height: @yearTextHeight;
+	background: @yearColor;
+	p{
+		color: #fff;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.publication, .awards, .skills{
+	text-align: center;
+	p{
+		width: @centerTextWidth;
+		margin: 0 auto;
+	}
+	p.title{
+		width: 110px;
+		height: 20px;
+		line-height: 20px;
+		margin-bottom: 10px;
+		color: #fff;
+		text-align: center;
+	}
+}
+
+
+.mark{
+	width: 40px;
+	height: 40px;
+	font-family: @specialFont;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 10px;
+	p{
+		line-height: 40px;
+		color: #fff;
+	}
+}
+.mark.education{
+	background: @educationColor;
+}
+.mark.self{
+	background: @selfColor;
+}
+.mark.intern{
+	background: @internColor;
+}
+.mark.master{
+	background: @masterColor;
+}
+.mark.bachelor{
+	background: @bachelorColor;
+}
+.mark.publication{
+	background: @publishColor;
+}
+.mark.awards{
+	background: @awardsColor;
+}
+.mark.skills{
+	background: @skillsColor;
+}
+
+.block{
+	width: 600px;
+	p.time{
+		color: @lightBlack;
+		font-size: 12px;
+		line-height: 12px;
+		margin-bottom: 10px;
+	}
+	p.t1{
+		font-size: 20px;
+		font-weight: bold;
+		font-family: @specialFont;
+		line-height: 15px;
+		margin-bottom: 5px;
+	}
+	p.t2{
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 16px;
+		margin-bottom: 10px;
+	}
+	p.t3{
+		font-size: 14px;
+		line-height: 14px;
+		margin-bottom: 5px;
+		color: @midBlack;
+	}
+	p.tags{
+		font-size: 16px;
+		line-height: 16px;
+		margin-bottom: 10px;
+		a{
+			margin-right: 15px;
+		}
+	}
+	ul{
+		padding: 50px 40px;
+		background: @superlightBlack;
+		li{	
+			list-style-type: disc;
+			margin-bottom: 15px;
+			text-align: left;
+			margin-left: 20px;
+			p.t3{
+				width: 470px;
+				color: @darkBlack;
+			}
+		}
+		li:last-child{
+			margin-bottom: 0;
+		}
+		.img-box{
+			margin: 25px 0 15px 0;
+			img.thumbnail{
+				width: 470px;
+			}
+		}
+			
+	}
+}
+.skills{
+	ul{
+		li{
+			list-style: none;
+			span{
+				float: left;
+			}
+			span.left{
+				width: 130px;
+				text-align: right;
+				color: @skillsColor;
+				font-weight: bold;
+				margin-right: 10px;
+				display: block;
+			}
+			span.right{
+				width: 330px;
+				display: block;
+			}
+
+		}
+	}
+}
+.education{
+	p.color, strong{
+		color: @educationColor;
+	}
+}
+.master{
+	p.color, strong{
+		color: @masterColor;
+	}
+}
+.bachelor{
+	p.color, strong{
+		color: @bachelorColor;
+	}
+}
+.intern{
+	p.color, strong{
+		color: @internColor;
+	}
+}
+.awards{
+	p.color, strong{
+		color: @awardsColor;
+	}
+	p.title{
+		background: @awardsColor;
+	}
+	a:hover{
+		color: @awardsColor;
+	}
+}
+.publication{
+	em, strong{
+		color: @publishColor;
+	}
+	p.title{
+		background: @publishColor;
+	}
+}
+.skills{
+	p.color, strong{
+		color: @skillsColor;
+	}
+	p.title{
+		background: @skillsColor;
+	}
+	a:hover{
+		color: @skillsColor;
+	}
+}
+
+	
+
+.portfolio.self{
+	p.color{
+		color: @selfColor;
+	}
+}
+
+
+
+
+.youtube{
+	width: 53px;
+	height: 37px;
+	display: block;
+	background-repeat: no-repeat;
+	margin-bottom: 10px;
+	.at2x('../img/youtube.png', 53px, 37px);
+}
+.youtube:hover{
+	.at2x('../img/youtube_h.png', 53px, 37px);
+}
+
+
+
+.portfolio{
+	width: @portfolioWidth;
+	background: #fff;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+		.title{
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 30px;
+			font-family: @specialFont;
+		}
+		.time{
+			font-size: 12px;
+		}
+		p.tags{
+			font-size: 16px;
+			line-height: 16px;
+			margin-bottom: 10px;
+			a{
+				margin-right: 15px;
+			}
+		}
+		
+		@videoplayWidth: 120px;
+		@videoIconWidth: 44px;
+		@videoPaddingWidth: 10px;
+		a.videoplay{
+			width: @videoplayWidth;
+			height: @videoIconWidth;
+			display: block;
+			background-repeat: no-repeat;
+			.at2x('../img/videoplay.png', @videoIconWidth, @videoIconWidth);
+			p{
+				height: 100%;
+				width: (@videoplayWidth - @videoIconWidth - @videoPaddingWidth*2);
+				padding: 0 @videoPaddingWidth;
+				color: @midBlack;
+				letter-spacing: 3px;
+				font-size: 14px;
+				background: @superlightBlack;
+				margin-left: @videoIconWidth;
+				line-height: @videoIconWidth;
+
+				-moz-border-radius-topright:3px;
+				-webkit-border-radius-topright:3px;
+				border-top-right-radius:3px;
+				-moz-border-radius-bottomright:3px;
+				-webkit-border-radius-bottomright:3px;
+				border-bottom-right-radius:3px;
+			}
+		}
+		a.videoplay:hover{
+			.at2x('../img/videoplay_h.png', 44px, 44px);
+			p{
+				background: rgba(238,238,238,0.7); 
+			}
+		}
+		
+		
+			
+	.thumbnail{
+		width: 600px;
+	}
+
+		
+}
+
+
+
+
+
+
+
+
+.verticalLine.center {
+	margin: 10px 0;
+	width: 1px;
+	margin-left: 300px;
+    border-left: 1px solid #000;
+}
+.verticalLine.center.ml-500{
+	margin-left: 500px;
+}
+
+
+@toolbarWidth: 40px;
+@toolbarIconWidth: 40px;
+.toolbar{
+	width: @toolbarWidth;
+	height: 100%;
+	z-index: 100px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background: #363f48;
+	text-align: center;
+	.work-categroy{
+		ul{
+			width: @toolbarWidth;
+			li{
+				color: #fff;
+				float: left;
+				width: @toolbarWidth;
+				height: @toolbarIconWidth;
+				line-height: @toolbarIconWidth;
+				margin-bottom: 2px;
+				position: relative;
+				cursor: pointer;
+				p{
+					width: @toolbarIconWidth !important;
+				}
+				div.hover-text{
+					position: absolute;
+					top: 0;
+					right: (@toolbarIconWidth+10);
+					height: @toolbarIconWidth;
+					line-height: @toolbarIconWidth;
+					span.text{
+						display: inline-block;
+						padding: 0 10px;
+						text-align: right;
+					}
+					span.arrow.right{
+						right: -12px;
+						top: 14px;
+					}
+				}
+			}
+			li.h-10{
+				height: 10px;
+			}
+			li.list-resume-icon{
+				.at2x('../img/list-resume.png', 40px, 40px);
+			}
+			li.education{
+				.hover-text{
+					background: @educationColor;
+				}
+				span.arrow.right{
+					border-left: 6px solid @educationColor;
+				}
+			}
+			li.self{
+				.hover-text{
+					background: @selfColor;
+				}
+				span.arrow.right{
+					border-left: 6px solid @selfColor;
+				}
+			}
+			li.intern{
+				.hover-text{
+					background: @internColor;
+				}
+				span.arrow.right{
+					border-left: 6px solid @internColor;
+				}
+			}
+			li.master{
+				.hover-text{
+					background: @masterColor;
+				}
+				span.arrow.right{
+					border-left: 6px solid @masterColor;
+				}
+			}
+			li.bachelor{
+				.hover-text{
+					background: @bachelorColor;
+				}
+				span.arrow.right{
+					border-left: 6px solid @bachelorColor;
+				}
+			}
+			li.publication{
+				.hover-text{
+					background: @publishColor;
+				}
+				span.arrow.right{
+					border-left: 6px solid @publishColor;
+				}
+			}
+			li.awards{
+				.hover-text{
+					background: @awardsColor;
+				}
+				span.arrow.right{
+					border-left: 6px solid @awardsColor;
+				}
+			}
+			li.skills{
+				.hover-text{
+					background: @skillsColor;
+				}
+				span.arrow.right{
+					border-left: 6px solid @skillsColor;
+				}
+			}
+		}
+	}
+}
+
+	
+.arrow.right {
+	z-index: 5;
+}
+.arrow {
+	position: absolute;
+	top: 20px;
+	right: 16px;
+	border: 6px dashed transparent;
+	display: block;
+	height: 0;
+	width: 0;
+}
+
+
+
+
+
+
+

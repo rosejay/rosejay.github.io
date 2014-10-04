@@ -1,0 +1,213 @@
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td, menu{margin:0;padding:0;}
+html{overflow-y:scroll}
+body,button,input,select,textarea{ font:14px/1.5 "Helvetica-Neue", "Arial", sans-serif;}
+iframe{border:0;margin:0;padding:0;}
+img, fieldset{border:0;}
+cite,em,strong,th{font-style:inherit;font-weight:inherit;}
+h1, h2, h3, h4, h5, h6{font-size:100%;font-weight:normal;}
+input,button,textarea,select{*font-size:100%;}
+ol, ul, menu{list-style:none;}
+input, button{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+th{text-align:left;}
+blockquote{quotes:none;}
+blockquote:before,blockquote:after,{content:'';content:none;}
+a{text-decoration:none;}
+td,th,div,p{word-wrap:break-word}
+pre,xmp{white-space:pre-wrap}
+form{display:inline;}
+input{vertical-align:middle;}
+em,cite,i{font-style:normal;}
+s{text-decoration:none;}
+*{outline:none}
+:focus{outline:0;}
+.clear{clear:both;}
+div{display: block;}
+.fr{ float: right; }
+.fl{ float: left; }
+/*css3*/
+.br10{-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
+.br5{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+::selection {
+	background: #fff687;
+}
+html{
+	width: 100%;
+  	height: 100%;
+  	background: #fff;
+  	min-width: 1280px;
+}
+body{
+	position: relative;
+	height: 2000px;
+}
+
+canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+
+	transform-origin: 50%, 50%;
+	-moz-transform-origin: 50%, 50%;
+	-webkit-transform-origin: 50%, 50%;
+	-webkit-transition: -webkit-transform 1.0s linear;
+}
+canvas.fast{
+	-webkit-transition: -webkit-transform 0.0s linear;
+
+}
+
+p.date{
+	position: absolute;
+	width: 200px;
+	text-align: center;
+	font-size: 12px;
+	color: #aaa;
+}
+
+#textBox{
+	position: absolute;
+	top: 250px;
+	right: 0;
+	width: 300px;
+	height: 500px;
+	color: #aaa;
+}
+#textBox h2{
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#textBox #textTime{
+	font-size: 15px;
+	color: #ccc;
+	width: 100%;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+#textBox p{
+	width: 100%;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+
+
+#hide{
+	position: fixed;
+	left: 20px;
+	top: 10px;
+	font-size: 12px;
+	color: #ddd;
+	cursor: pointer;
+	z-index: 101;
+}
+#hide:hover{
+	color: #666;
+	text-decoration: underline;
+}
+
+
+
+.navigation{
+	position: fixed;
+	left: 20px;
+	top: 30px;
+	color: #aaa;
+	width: 200px;
+	z-index: 100;
+}
+
+.navigation h2{
+	margin-top: 20px;
+	width: 100%;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #000;
+}
+.navigation p{
+	width: 100%;
+	font-size: 14px;
+	line-height: 20px;
+	color: #666;
+}
+.navigation .section{
+	width: 100%;
+}
+.navigation .section h4{
+	width: 100%;
+	line-height: 20px;
+	font-size: 12px;
+	color: #ddd;
+	margin: 5px 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.navigation .section h3{
+	width: 100%;
+	line-height: 20px;
+	font-weight: bold;
+	color: #333;
+	margin: 30px 0 10px;
+}
+.navigation .section ul{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.navigation .section ul li{
+	float: left;
+	margin: 5px 0;
+	width: 100%;
+	line-height: 20px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3;
+    padding-left: 7px;
+}
+.navigation .section ul li.sel{
+	color: #666;
+	font-weight: bold;
+	padding-left: 4px;
+	border-left: 3px solid #666;
+}
+.navigation .section ul li:hover{
+	color: #666;
+}
+
+.navigation .section ul li a{
+	color: #666;
+}
+
+
+
+
+.demoCanvas{
+	position: absolute;
+	top: 0;
+	left: 200px;
+	width: 1050px;
+}
+
+.demoCanvas h3{
+	width: 800px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	top: 80px;
+	color: #000;
+	position: absolute;
+}
+
+
+
+
+
+
+
+

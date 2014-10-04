@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properities -->
+  <title>Chronic Pain Rehabilitation Assistant | Ye's Stories</title>
+  <meta property="og:site_name" content="Ye's Stories">
+  <meta property="og:title" content="Ye's Stories">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://yelin.in/">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta name="thumbnail" content="" >
+  <link rel="image_src" href="" />
+
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+  <!-- font -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:200,100,400,300,600,700' rel='stylesheet' type='text/css'>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/lib/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet/less" type="text/css" href="../css/main.less">
+  <link rel="stylesheet/less" type="text/css" href="../css/work.less">
+
+  <!-- javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="../js/lib/bootstrap.min.js"></script>
+  <script src="../js/lib/less-1.7.5.min.js"></script>
+
+</head>
+<body>
+  
+
+<section class="workDetail">
+  
+  <div class="innderSection">
+    
+    <div class="workSummary">
+
+      <h2 class="projTitle">Chronic Pain Rehabilitation Assistant</h3>
+      <h3 class="projSubtitle">Activity Motivator based on Affect-in-Motion Recognition</h4>
+      <a href="http://www.ucl.ac.uk/uclic" target="_blank" class="painSponsor workSponsor"> </a>
+
+      <summary>This study investigated the design of an affordable and wearable device, using Arduino and audio feedback, to motivate chronic pain patients to perform physical activity, and to nurture confidence in the movements in their daily lives. </summary>
+      <summary>A specific scenario approach was used, by analysing confidence level of chronic pain patients performing the reach forward exercise. Avatar clips of chronic pain patients doing the reach forward exercise were labelled by high, medium or low confidence using a crowdsourcing platform. Features were extracted and analysed from motion capture data. Random Forest was used to train the model. The result shows there are more bending in the spine, and more movements in the arms and spine, in high confidence group. Based on the findings, the positions and numbers of sensors were decided. Two motivation strategies using audio feedback were designed and implemented to motivate patients to do rehabilitation exercises.</summary>
+
+    </div>
+      <!--
+    <div class="workImages">
+      <img src="../assets/spiro/spiro-01.png" class="img-responsive">
+      <div class="clear"></div>
+    </div>
+    -->
+
+    <article class="workDescription">
+
+
+        <hr class="section-divider">
+
+        <div class="paragraph">
+          <p class="small">01/2014 - 05/2014</p>
+          <p class="small">Affective Computing and Human Robot Interaction Project at UCLIC. </p>
+          <p class="small">Data Analysis, Machine Learning, Affective Interaction, Arduino, Processing</p>
+        </div>
+
+        <hr class="section-divider" id="VIDEO" >
+
+        <div class="paragraph">
+          <iframe src="//player.vimeo.com/video/99381749" width="600" height="332" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+
+        <hr class="section-divider">
+        
+        <div class="paragraph">
+          <h3>The Problem</h3>
+          <p>Chronic pain (CP) patients suffer from physical, psychological, and emotional problems, such as fear of movement and (re)injury, low self-efficacy, the amplification of pain signals in the nervous system, etc. Protective behaviours, such as guarding oneself and avoiding painful movements, are observed in people with CP, which decrease the benefit of physical activity and may lead to loss of mobility.</p>
+          <p>Technologies are used for addressing this issue. Needs and barriers for CP patients and physiotherapists are analysed to help develop technology to support physical activities [4]. Audio feedback is used for motivating CP patients doing reach forward exercise [1]. Supervised machine learning is used for automatic recognition of guarding behaviours [2]. However, there are some hurdles in introducing technology for home rehabilitation, as whole body motion capture suit is unaffordable and difficult to wear by CP patients.</p>
+        </div>
+
+        
+        <div class="paragraph">
+          <h3>Crowdsourcing Labelling</h3>
+          <p>The motion segments of the reaching forward exercise from [5] study were used the data set for this study, which have 19 people with low-back chronic pain (CLBP) doing physical activities while wearing an Inertial Measuring Unit (IMU) whole-body motion capture suit.</p>
+          <p>The reach forward exercise avatar clips based on BVH data were segmented. Avatar clips were used to eliminate labelling bias from other modalities, such as facial expression. A crowdsourcing platform, CrowdFlower, was used to do the <strong>confidence</strong> labelling in three categories, which are high, medium or low confidence. </p>
+        </div>
+        
+        <div class="paragraph">
+          <h3>Feature Extraction</h3>
+          <img src="../assets/chronic/pain-01s.png" class="img-responsive">
+          <figcaption class="imageCaption">Features via observation: straight spine, straight legs; bending elbows, bending arms; bending knees; shoulder lean/rotation.</figcaption>
+          <p>Based on literature review and observation, the following features were analysed: bending spine, bending head, bending knees, bending elbows, azimuthal shoulder rotation, the duration of time leaning forward, duration of arms away from the body, and quantity of movement (vibration).</p>
+        </div>
+        
+        <div class="paragraph">
+          <img src="../assets/chronic/pain-02.png" class="two img-responsive">
+          <p>Based on the above features, the angles between the 13 representative vectors and the horizontal plane were analysed.</p>
+        </div>
+        
+
+        <div class="paragraph">
+          <img src="../assets/chronic/pain-03s.png" class="img-responsive">
+          <figcaption class="imageCaption">Angles between the vector(Neck, Spine) with horizontal plane.</figcaption>
+          <p>The range of angle is larger for high confidence group, because the low confidence group bend their spine less. Therefore, the <strong>range</strong>, defined as maximum minus minimum, and <strong>mean</strong> value, were calculated. </p>
+        </div>
+
+        <div class="paragraph">
+          <img src="../assets/chronic/pain-04s.png" class="img-responsive">
+          <figcaption class="imageCaption">Rate of Change of Angle between vector(Neck, Spine) with horizontal plane.</figcaption>
+          <p>As the movements were more stiff and rigid in low confidence group, there were less movements/vibrations in low confidence group than in other groups. The range, mean and <strong>standard deviation</strong> of the sequential <strong>rate of change</strong>, defined as (t(n)-t(n-1))/t(n-1), was calculated. </p>
+        </div>
+
+        <div class="paragraph">
+          <img src="../assets/chronic/pain-05.png" class="img-responsive">
+          <figcaption class="imageCaption">Definition of inner rate of change.</figcaption>
+          <p>Based on the above graphs, there were more vibrations in the beginning and the end, due to some adjustment movements, but less during the middle period. Therefore, the range, mean and standard deviation of the rate of change of the middle period was calculated. </p>
+        </div>
+
+        <div class="paragraph">
+          <img src="../assets/chronic/pain-06s.png" class="img-responsive">
+          <figcaption class="imageCaption">Angles between the vector(UpperArmLeft, ForeArmLeft) with horizontal plane.</figcaption>
+
+          <img src="../assets/chronic/pain-07s.png" class="img-responsive">
+          <figcaption class="imageCaption">Bending time of a low confident subject.</figcaption>
+
+          <img src="../assets/chronic/pain-08s.png" class="img-responsive">
+          <figcaption class="imageCaption">Bending time of a high confident subject.</figcaption>
+
+          <p>The low confidence group tended to have less movements when they held the arms up. Thus, the total number of frames when the arms were held up was calculated as indicator for amount of movement. </p>
+        </div>
+
+        <div class="paragraph">
+          <h3>Feature Modelling</h3>
+          <p>Classification algorithms, such as Naïve Bayes, SVM, J48, k-NN, RR, KRR, SVR, KSVR, MLP and Random Forest (RF), have been evaluated for automatic recognition of affective states [10][3]. <strong>Random Forest</strong> [9] achieved high performance in the two studies. As Random Forest is suitable for high dimensional data input and variable importance can be calculated from <strong>out-of-bag (OOB)</strong>, Random Forest was used to classify “High, Medium, Low” of confidence behaviour in this study. Using the <strong>leave one subject out cross validation</strong>, the model was trained using 13 sets of data, and was tested on the remaining 1 dataset. The procedure was repeated for 14 times to evaluate the performance. </p>
+        </div>
+        <div class="paragraph">
+          <h3>Feature Selection</h3>
+          <img src="../assets/chronic/pain-09.png" class="img-responsive" >
+          <figcaption class="imageCaption">Example of confusion matrix</figcaption>
+          <img src="../assets/chronic/pain-10.png" class="img-responsive">
+          <figcaption class="imageCaption">Example of OOB classification error and estimate of OOB feature importance</figcaption>
+        </div>
+        <div class="paragraph">
+          <p>182 features, 14 variables for 13 vectors, were calculated. Using the above method, features were analysed in two steps. Firstly, vectors were kept the same, variables were changed to find more reliable variables based on the accuracy and the estimated OOB feature importance figure. Secondly, variables were kept the same, vectors were changed to find more reliable body parts to position sensors, also based on the accuracy and the estimated OOB feature importance figure. </p>
+        </div>
+        <div class="paragraph">
+          <img src="../assets/chronic/pain-11s.png" class="img-responsive" >
+          <figcaption class="imageCaption">Variables analysis</figcaption>
+          <img src="../assets/chronic/pain-14s.png" class="img-responsive">
+          <figcaption class="imageCaption">Vectors analysis</figcaption>
+          <p>For variables on the back, the range and mean value of hip-spine and spine-neck bending, and the quantity of movement features were more reliable. For variables on the arms, the feature of detaching lack of movement while holding upper arms up was better than that of the lower arms. Vibration feature on the right upper arm can be detected. For variables on the shoulder, range and standard deviation of rate of change has higher importance.</p>
+        </div>
+        <div class="paragraph">
+          <h3>Selected Features</h3>
+          <p>The following features are significant: (1) more bending of spine in high confidence group, (2) more spine movements in high confidence group, (3) low confidence group lacked of movement while holding upper arms up. </p>
+          <p>Other interesting features are (1) low confidence group would lean the shoulder towards one side more than high confidence group, (2) more shakings (vibrations / movements) on legs in high confidence group.</p>
+          <img src="../assets/chronic/pain-12.png" class="img-responsive">
+          <img src="../assets/chronic/pain-13.png" class="img-responsive">
+        </div>
+        
+        <div class="paragraph">
+          <h3>Positioning of Accelerometers</h3>
+          <img src="../assets/chronic/pain-15s.png" class="img-responsive" >
+          <p>The performance of combining selected features and numbers of accelerometers were analysed. Combining more features and adding more accelerometers would increase the accuracy, but it would be more difficult to wear for CP patients. Thus, only one accelerometer was placed at a time: 1) positioning one accelerometer on the upper back of the body; 2) positioning one accelerometer on upper arm.</p>
+        </div>
+
+
+        <div class="paragraph">
+          <h3>Getting Data From Accelerometer</h3>
+          <img src="../assets/chronic/pain-16.png" class="img-responsive" >
+          <p>An Engduino board was used, which is based on an Arduino LilyPad with a 3D accelerometer on it. Although it is impossible to get the XYZ position value from an accelerometer, it can output the acceleration values in the direction of the three XYZ axis, due to gravity. Accelerometers can also be used as inclinometers. The pitch and roll value can be calculated. As the accelerometer would be sticked vertically to body parts, both the roll value could be simulated as the angle of the bending of the body part with the horizontal plane. </p>
+        </div>
+
+
+
+        <div class="paragraph">
+          <h3>Motivation Strategy 1</h3>
+          <img src="../assets/chronic/pain-17.png" class="img-responsive" >
+          <img src="../assets/chronic/pain-18.png" class="img-responsive" >
+          <p>The first motivation strategy was designed for the reach forward exercise. As showed in the above video demo, the device was placed on the user's back. The user would be asked to set his minimum and the maximum position via an external button. A confidence level was set automatically based on the data analysis results. A sound wave would be generated while the user reaching forward, to motivate the patient to do the exercise. The pitch rises while the participant reaching forward over the threshold, and it goes down before they reaches the maximum position. <strong>When the user reached over the confidence level, the sound would be generated faster, to make patients feel easier to do a little more.</strong> It increased patients’ self perception and also effectively prevented overactive movements.</p>
+        </div>
+
+
+        <div class="paragraph">
+          <h3>Motivation Strategy 2</h3>
+          <img src="../assets/chronic/pain-19s.png" class="img-responsive" >
+          <p>The second motivation strategy is that the device would generate random pitches based on the amount of patient’s movement to motivate non-intrusive movement. The amount of movement is evaluated by the standard deviation of the range of change. The immediate sound feedback would indicate to patients they are doing exercise, and give them a sense of achievement. <strong>The sound would harder to trigger after a period, to address on the steady increment requirement and to motivate patients to do more.</strong> CP patients can also wear the device on arms while doing housework. The device would give slight sound feedback based on the quantity of arm movements. In this way, technology and physical activity can be incorporated into their daily life, which helps to ease the fear of doing exercise, to maintain gains in capability, and to do exercise in a more non-intrusive way.</p>
+        </div>
+
+
+        <div class="paragraph">
+          <a href="#VIDEO">
+            <h4>VIDEO DEMO</h4>
+          </a>
+        </div>
+
+
+
+        <hr class="section-divider">
+
+        <div class="paragraph">
+          <p class="small">01/2014 - 05/2014</p>
+          <p class="small">Affective Computing and Human Robot Interaction Project at UCLIC. </p>
+          <p class="small">Data Analysis, Machine Learning, Affective Interaction, Arduino, Processing</p>
+        </div>
+
+
+
+      </article>
+  </div>
+    
+  
+
+
+
+  
+
+
+  
+    
+
+
+  
+
+
+</section>
+
+
+
+
+  <script src="../js/lib/retina.min.js"></script>
+  <script src="../js/main.js"></script>
+
+
+  <div style="display:none">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-38562586-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </div>
+  
+</body>
+</html>

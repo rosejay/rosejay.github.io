@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Eye Drawing</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="js/ocanvas-2.4.0.js"></script>
+
+
+    	<script type="text/javascript" src="js/sylvester.src.js"></script>
+    	<script type="text/javascript" src="js/raphael.js"></script>
+    	<script type="text/javascript" src="js/kalman.js"></script>
+    	<script type="text/javascript" src="js/lib/async.js"></script>
+	</head>
+	<body>
+
+
+		<div class="main">
+			<div class="dataArea fl">
+				<img id="sourceImg" src=""/>
+				<canvas id="canvas" width="200" height="200"></canvas>
+			</div>
+			<div class="dataChart fl">
+
+
+				<h3 id="title"></h3>
+				<div class="mylegend">
+					<ul>
+						
+						<li>
+							<p class="rect fix"><em></em><span>Fixation</span></p> 
+							<p class="total fix"> <span class="avg"></span>
+								<span class="data">
+									<span class="data-title">Avg.</span>
+									<span class="data-num"></span>
+								</span>
+							</p>
+							<p class="perc fix">
+								<span class="data-perc"></span>
+								<span class="data-time"></span>
+							</p>
+							
+						</li>
+						<li>
+							<p class="rect sac"><em></em><span>Saccade</span></p>
+							<p class="total sac"> <span class="avg"></span>
+								<span class="data">
+									<span class="data-title">Avg.</span>
+									<span class="data-num"></span>
+								</span>
+							</p>
+							<p class="perc sac">
+								<span class="data-perc"></span>
+								<span class="data-time"></span>
+							</p>
+						</li>
+						<li>
+							<p class="rect red"><em></em><span>Out View</span></p>
+							<p class="total red">
+							</p>
+							<p class="perc red">
+								<span class="data-perc"></span>
+								<span class="data-time"></span>
+							</p>
+						</li>
+
+						<li class="t-20">
+							<p class="rect gray"><span>CaliData</span></p>
+							<p class="total gray"> 
+							</p>
+							<p class="perc gray">
+								<span class="data-perc"></span>
+								<span class="data-time"></span>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<div class="playBar">
+					<div class="play playbtn fl"></div>
+					<div class="FrameControl fl">
+						<p class="checkFrame"><span></span>by Frame</p>
+						<div class="checkFrameDiv">
+							<p class="s">0</p>
+							<p class="e">50</p>
+							<p class="c">20</p>
+							<div class="slot">
+								<div class="slider"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="timeline">
+
+			<p class="up first-frame"></p>
+			<p class="up last-frame"></p>
+			<p class="down first-frame"></p>
+			<p class="down last-frame"></p>
+			<div class="timeData up">
+				
+				<p class="first"></p>
+				<p class="center"> - { <span></span> } - </p>
+				<p class="last"></p>
+				
+			</div>
+			<div class="zoom lines">
+				<ul></ul>
+				<canvas id="bigCanvas"></canvas>
+			</div>
+
+			<div class="lines normal">
+				<!--<ul></ul>-->
+				<canvas id="smallCanvas"></canvas>
+				<div class="overlay-box">
+					<div id="midControl-l" class="midcontrol left fl"></div>
+					<div id="midControl" class="midcontrol mid fl"></div>
+					<div id="midControl-r" class="midcontrol left fl"></div>
+					<div class="clear"></div>
+				</div>
+				
+				<div id="leftControl" class="control br5 left"><p></p></div>
+				<div id="rightControl" class="control br5 right"><p></p></div>
+			</div>
+
+			<div class="timeData down">
+				<p class="first"></p>
+				<p class="last"></p>
+			</div>
+			
+			<div class="frameTip">
+				<p>hello world!</p>
+			</div>
+		</div>
+		
+
+		<script type="text/javascript" src="js/data.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/controller.js"></script>
+
+		<script type="text/javascript" src="js/kalman3.js"></script>
+
+
+	</body>
+</html>
