@@ -26,6 +26,22 @@ $(document).ready(function() {
 
 	if(window.mobilecheck()){
 
+
+		document.addEventListener("touchmove", ScrollStart, false);
+		document.addEventListener("scroll", Scroll, false);
+
+		function ScrollStart() {
+		    $('#nav').fadeOut(100);
+		}
+
+		function Scroll() {
+		    //end of scroll event for iOS
+		    //and
+		    //start/end of scroll event for other browsers
+		    $('#nav').fadeIn(100);
+		}
+
+
 	}
 	else{
 
