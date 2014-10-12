@@ -28,16 +28,14 @@ $(document).ready(function() {
 		document.addEventListener("scroll", Scroll, false);
 
 		function ScrollStart() {
-			alert("start")
-		    $('body').append('<p>start</p>');
+			$('#nav').fadeOut(0);
 		}
 
 		function Scroll() {
-			alert("stop")
 		    //end of scroll event for iOS
 		    //and
 		    //start/end of scroll event for other browsers
-		    $('body').append('<p>stop</p>');
+		    $('#nav').fadeIn(500);
 		}
 
 
