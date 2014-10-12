@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-	$('.about').fadeOut(0);
-	$('#worksBtn').fadeOut(0);
-
 
 	$('#aboutBtn').click(function(){
 		$('#aboutBtn').fadeOut(0);
@@ -26,19 +23,21 @@ $(document).ready(function() {
 
 	if(window.mobilecheck()){
 
-
+		//$(window).scroll(function() { alert("Scrolled"); });
 		document.addEventListener("touchmove", ScrollStart, false);
 		document.addEventListener("scroll", Scroll, false);
 
 		function ScrollStart() {
-		    $('#nav').fadeOut(100);
+			alert("start")
+		    $('body').append('<p>start</p>');
 		}
 
 		function Scroll() {
+			alert("stop")
 		    //end of scroll event for iOS
 		    //and
 		    //start/end of scroll event for other browsers
-		    $('#nav').fadeIn(100);
+		    $('body').append('<p>stop</p>');
 		}
 
 
