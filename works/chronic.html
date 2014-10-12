@@ -15,6 +15,7 @@
   <meta property="og:description" content="">
   <meta property="og:image" content="">
   <meta name="thumbnail" content="" >
+  <meta name="format-detection" content="telephone=no">
   <link rel="image_src" href="" />
 
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
@@ -25,6 +26,7 @@
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="../css/lib/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet/less" type="text/css" href="../css/mobile.less" />
   <link rel="stylesheet/less" type="text/css" href="../css/main.less">
   <link rel="stylesheet/less" type="text/css" href="../css/work.less">
 
@@ -43,13 +45,12 @@
     
     <div class="workSummary">
 
-      <h2 class="projTitle">Chronic Pain Rehabilitation Assistant</h3>
+      <h2 class="projTitle chronic">Chronic Pain Rehabilitation Assistant</h3>
       <h3 class="projSubtitle">Activity Motivator based on Affect-in-Motion Recognition</h4>
       <a href="http://www.ucl.ac.uk/uclic" target="_blank" class="painSponsor workSponsor"> </a>
 
       <summary>This study investigated the design of an affordable and wearable device, using Arduino and audio feedback, to motivate chronic pain patients to perform physical activity, and to nurture confidence in the movements in their daily lives. </summary>
-      <summary>A specific scenario approach was used, by analysing confidence level of chronic pain patients performing the reach forward exercise. Avatar clips of chronic pain patients doing the reach forward exercise were labelled by high, medium or low confidence using a crowdsourcing platform. Features were extracted and analysed from motion capture data. Random Forest was used to train the model. The result shows there are more bending in the spine, and more movements in the arms and spine, in high confidence group. Based on the findings, the positions and numbers of sensors were decided. Two motivation strategies using audio feedback were designed and implemented to motivate patients to do rehabilitation exercises.</summary>
-
+      <summary>A specific scenario approach was used, by analysing confidence level of chronic pain patients performing the reaching forward exercise. Avatar clips of chronic pain patients doing the exercise were labelled by high, medium or low confidence, using a crowdsourcing platform. Features were extracted from motion capture data. Supervised machine learning was used to train the model. The result shows there are more bending in the spine, and more movements in the arms and spine, in high confidence group. Based on these findings, accelerometers were used to detect these features on different parts of the body. The device and two motivation strategies using audio feedback were designed and implemented.</summary>
     </div>
       <!--
     <div class="workImages">
@@ -66,35 +67,54 @@
         <div class="paragraph">
           <p class="small">01/2014 - 05/2014</p>
           <p class="small">Affective Computing and Human Robot Interaction Project at UCLIC. </p>
-          <p class="small">Data Analysis, Machine Learning, Affective Interaction, Arduino, Processing</p>
+          <p class="small">Supervised by Nadia Berthouze and Nicolai Marquardt </p>
+          <p class="small">Affective Interaction, Data Analysis, Machine Learning, Arduino, Processing, Research</p>
         </div>
 
         <hr class="section-divider" id="VIDEO" >
 
         <div class="paragraph">
-          <iframe src="//player.vimeo.com/video/99381749" width="600" height="332" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="//player.vimeo.com/video/99381749" class="videoIndex" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
 
         <hr class="section-divider">
         
         <div class="paragraph">
           <h3>The Problem</h3>
-          <p>Chronic pain (CP) patients suffer from physical, psychological, and emotional problems, such as fear of movement and (re)injury, low self-efficacy, the amplification of pain signals in the nervous system, etc. Protective behaviours, such as guarding oneself and avoiding painful movements, are observed in people with CP, which decrease the benefit of physical activity and may lead to loss of mobility.</p>
-          <p>Technologies are used for addressing this issue. Needs and barriers for CP patients and physiotherapists are analysed to help develop technology to support physical activities [4]. Audio feedback is used for motivating CP patients doing reach forward exercise [1]. Supervised machine learning is used for automatic recognition of guarding behaviours [2]. However, there are some hurdles in introducing technology for home rehabilitation, as whole body motion capture suit is unaffordable and difficult to wear by CP patients.</p>
+          <p>Chronic pain (CP) patients suffer from physical, psychological, and emotional problems, such as <strong>fear of movement and (re)injury, low self-efficacy</strong>, the amplification of pain signals in the nervous system, etc [1]. Protective behaviours, such as guarding oneself and avoiding painful movements, are observed in people with CP, which decrease the benefit of physical activity and may lead to loss of mobility.</p>
+          <p>Technologies are used for addressing this issue. Needs and barriers for CP patients and physiotherapists are analysed to help develop technology to support physical activities [4]. Audio feedback is used for motivating CP patients doing reaching forward exercise [1]. Supervised machine learning is used for automatic recognition of guarding behaviours based on motion capture data[2]. However, there are some hurdles in introducing technology for home rehabilitation, as whole body motion capture suit is unaffordable and difficult to wear by CP patients.</p>
         </div>
 
         
         <div class="paragraph">
           <h3>Crowdsourcing Labelling</h3>
-          <p>The motion segments of the reaching forward exercise from [5] study were used the data set for this study, which have 19 people with low-back chronic pain (CLBP) doing physical activities while wearing an Inertial Measuring Unit (IMU) whole-body motion capture suit.</p>
-          <p>The reach forward exercise avatar clips based on BVH data were segmented. Avatar clips were used to eliminate labelling bias from other modalities, such as facial expression. A crowdsourcing platform, CrowdFlower, was used to do the <strong>confidence</strong> labelling in three categories, which are high, medium or low confidence. </p>
+          <p>The motion segments of the reaching forward exercise from [5] were used the data set for this study, which have 19 people with low-back chronic pain (CLBP) doing physical activities while wearing an Inertial Measuring Unit (IMU) whole-body motion capture suit.</p>
+          
+          <p>The avatar clips of patients doing the reaching forward exercise, which were generated from the BVH data, were segmented. Avatar clips were used due to ethical issues and to eliminate labelling bias from other modalities, such as facial expression. A crowdsourcing platform, CrowdFlower, was used to do the <strong>confidence</strong> labelling in three categories, high, medium or low confidence. </p>
+          <p>Self-efficacy is defined as one’s confidence in overcoming barriers to perform a behaviour [8]. It is a more important factor of disability than other factors such as fear of avoidance, movement and (re)injury, for CP patients. As the crowdsourcing platform was used to do the labelling, the word "confidence" is easier to be understood by people. Thus, the affective state, confidence, was chosen. </p>
         </div>
         
+
+        
+        <div class="paragraph">
+          <h3>Example of a LOW confidence avatar clip</h3>
+          <img src="../assets/chronic/chronic-01.gif" class="img-responsive two">
+          <figcaption class="imageCaption">Example of an avatar clip, which was labelled as LOW confidence.</figcaption>
+          <p>Protective behaviour can be seen from this clip, such as avoiding bending and movements.</p>
+        </div>
+
+        <div class="paragraph">
+          <h3>Example of a HIGH confidence avatar clip</h3>
+          <img src="../assets/chronic/chronic-02.gif" class="img-responsive two">
+          <figcaption class="imageCaption">Example of an avatar clip, which was labelled as HIGH confidence.</figcaption>
+        </div>
+
         <div class="paragraph">
           <h3>Feature Extraction</h3>
           <img src="../assets/chronic/pain-01s.png" class="img-responsive">
           <figcaption class="imageCaption">Features via observation: straight spine, straight legs; bending elbows, bending arms; bending knees; shoulder lean/rotation.</figcaption>
-          <p>Based on literature review and observation, the following features were analysed: bending spine, bending head, bending knees, bending elbows, azimuthal shoulder rotation, the duration of time leaning forward, duration of arms away from the body, and quantity of movement (vibration).</p>
+          <p>Based on literature review and observations on these labelled avatar clips, the following features were analysed: bending spine, bending head, bending knees, bending elbows, azimuthal shoulder rotation, the duration of time leaning forward, duration of arms away from the body, and quantity of movement (vibration).</p>
+          
         </div>
         
         <div class="paragraph">
@@ -106,6 +126,7 @@
         <div class="paragraph">
           <img src="../assets/chronic/pain-03s.png" class="img-responsive">
           <figcaption class="imageCaption">Angles between the vector(Neck, Spine) with horizontal plane.</figcaption>
+          <p>Green represents for high confidence group. Black represents for the medium confidence group. Red represents for the low confidence group.</p>
           <p>The range of angle is larger for high confidence group, because the low confidence group bend their spine less. Therefore, the <strong>range</strong>, defined as maximum minus minimum, and <strong>mean</strong> value, were calculated. </p>
         </div>
 
@@ -136,7 +157,7 @@
 
         <div class="paragraph">
           <h3>Feature Modelling</h3>
-          <p>Classification algorithms, such as Naïve Bayes, SVM, J48, k-NN, RR, KRR, SVR, KSVR, MLP and Random Forest (RF), have been evaluated for automatic recognition of affective states [10][3]. <strong>Random Forest</strong> [9] achieved high performance in the two studies. As Random Forest is suitable for high dimensional data input and variable importance can be calculated from <strong>out-of-bag (OOB)</strong>, Random Forest was used to classify “High, Medium, Low” of confidence behaviour in this study. Using the <strong>leave one subject out cross validation</strong>, the model was trained using 13 sets of data, and was tested on the remaining 1 dataset. The procedure was repeated for 14 times to evaluate the performance. </p>
+          <p>Classification algorithms, such as Naïve Bayes, SVM, J48, k-NN, RR, KRR, SVR, KSVR, MLP and Random Forest (RF), have been evaluated for automatic recognition of affective states [7][3]. In these two studies, <strong>Random Forest</strong> [6] achieved high performance, as it is suitable for high dimensional data input and variable importance can be calculated from <strong>out-of-bag (OOB)</strong>. Thus, random forest was used in this study to classify “High, Medium, Low” of confidence behaviour. Using the <strong>leave one subject out cross validation</strong>, the model was trained using 13 sets of data, and was tested on the remaining 1 dataset. The procedure was repeated for 14 times to evaluate the performance. </p>
         </div>
         <div class="paragraph">
           <h3>Feature Selection</h3>
@@ -146,13 +167,13 @@
           <figcaption class="imageCaption">Example of OOB classification error and estimate of OOB feature importance</figcaption>
         </div>
         <div class="paragraph">
-          <p>182 features, 14 variables for 13 vectors, were calculated. Using the above method, features were analysed in two steps. Firstly, vectors were kept the same, variables were changed to find more reliable variables based on the accuracy and the estimated OOB feature importance figure. Secondly, variables were kept the same, vectors were changed to find more reliable body parts to position sensors, also based on the accuracy and the estimated OOB feature importance figure. </p>
+          <p>182 features, 14 variables for 13 vectors, were calculated. Using the above method, features were analysed in two steps. Firstly, vectors were kept the same, variables were changed to find more reliable variables based on the accuracy and the estimated OOB feature importance figure. Secondly, variables were kept the same, vectors were changed to find more reliable body parts to position sensors. </p>
         </div>
         <div class="paragraph">
           <img src="../assets/chronic/pain-11s.png" class="img-responsive" >
-          <figcaption class="imageCaption">Variables analysis</figcaption>
+          <figcaption class="imageCaption">Step 1: variables analysis</figcaption>
           <img src="../assets/chronic/pain-14s.png" class="img-responsive">
-          <figcaption class="imageCaption">Vectors analysis</figcaption>
+          <figcaption class="imageCaption">Step 2: vectors analysis</figcaption>
           <p>For variables on the back, the range and mean value of hip-spine and spine-neck bending, and the quantity of movement features were more reliable. For variables on the arms, the feature of detaching lack of movement while holding upper arms up was better than that of the lower arms. Vibration feature on the right upper arm can be detected. For variables on the shoulder, range and standard deviation of rate of change has higher importance.</p>
         </div>
         <div class="paragraph">
@@ -182,7 +203,7 @@
           <h3>Motivation Strategy 1</h3>
           <img src="../assets/chronic/pain-17.png" class="img-responsive" >
           <img src="../assets/chronic/pain-18.png" class="img-responsive" >
-          <p>The first motivation strategy was designed for the reach forward exercise. As showed in the above video demo, the device was placed on the user's back. The user would be asked to set his minimum and the maximum position via an external button. A confidence level was set automatically based on the data analysis results. A sound wave would be generated while the user reaching forward, to motivate the patient to do the exercise. The pitch rises while the participant reaching forward over the threshold, and it goes down before they reaches the maximum position. <strong>When the user reached over the confidence level, the sound would be generated faster, to make patients feel easier to do a little more.</strong> It increased patients’ self perception and also effectively prevented overactive movements.</p>
+          <p>The first motivation strategy was designed for the reaching forward exercise. As showed in the above video demo, the device was placed on the user's back. The user would be asked to set his minimum and the maximum position via an external button. A confidence level was set automatically based on the data analysis results. A sound wave would be generated while the user reaching forward, to motivate the patient to do the exercise. The pitch rises while the participant reaching forward over the threshold, and it goes down before they reaches the maximum position. <strong>When the user reached over the confidence level, the sound would be generated faster, to make patients feel easier to do a little more.</strong> It increased patients’ self perception and also effectively prevented overactive movements.</p>
         </div>
 
 
@@ -206,11 +227,30 @@
         <div class="paragraph">
           <p class="small">01/2014 - 05/2014</p>
           <p class="small">Affective Computing and Human Robot Interaction Project at UCLIC. </p>
-          <p class="small">Data Analysis, Machine Learning, Affective Interaction, Arduino, Processing</p>
+          <p class="small">Supervised by Nadia Berthouze and Nicolai Marquardt </p>
+          <p class="small">Affective Interaction, Data Analysis, Machine Learning, Arduino, Processing, Research</p>
         </div>
 
 
+        <hr class="section-divider">
 
+        <div class="paragraph">
+          <p class="ref">[1] Singh, A., Klapper, A., Jia, J., Fidalgo, A., Jimenez, A., Kanakam, N., Bianchi-Berthouze, N. and Williams, A. (2014). Motivating People with Chronic Pain to do Physical Activity: Opportunities for Technology Design. CHI’14, April 28 -May 1, 2014, Toronto, Canada </p>
+          <p class="ref">[2] Aung, M. S. H., Bianchi-Berthouze, N., Watson, P. and Williams, A C de C. (2014). Automatic Recognition of Fear-Avoidance behavior in Chronic Pain Physical Rehabilitation. 8th International Conference on Pervasive Computing Technologies for Healthcare, May 20–23, 2014, Oldenburg, Germany</p>
+          <p class="ref">[3] Griffin, H. J., Aung, M. S. H., Romera-Paredes, B., McLoughlin, C., McKeown, G., Curran, W. and Bianchi-Berthouze, N. (2014). Laughter Type Recognition from Whole Body Motion. 2013 Humaine Association Conference on Affective Computing and Intelligent Interaction</p>
+          <p class="ref">[4] Swann-Sternberg, T., Singh, A., Bianchi-Berthouze, N. and Williams, A. C.de.C. (2012). User Needs for Technology Supporting Physical Activity in Chronic Pain. CHI’12, May 5–10, 2012, Austin, Texas, USA</p>
+
+          <p class="ref">[5] Cella, M., Aung, M.S.H, Meng, H., Bianchi-Berthouze, N., Romera-Paredes, B., Singh, A., Shafizadehkenari, M., Williams, A. C.de.C, Watson, P., Kemp, A., Brooks, S., Kaltwang, S., and Valstar, M. (2012). Identifying Pain Behaviour for Automatic Recognition. 14th World Congress on Pain</p>
+          <p class="ref">[6] Breiman, L. (2001). Random Forests. Machine Learning, Vol.45, No.1, pp.5-32, 2001</p>
+          <p class="ref">[7] Gjoreski, H., Luštrek, M. and Gams, M. (2011). Accelerometer Placement for Posture Recognition and Fall Detection. 2011 Seventh International Conference on Intelligent Environments</p>
+          <p class="ref">[8] Bandura, A. (1977) Self-efficacy: toward a unifying theory of behavioral change. Psychol Rev 1977;84:191–215</p>
+        </div>
+
+
+        <hr class="section-divider">
+        <div class="paragraph">
+          <a href="#" class="arrow"></a>
+        </div>
       </article>
   </div>
     
@@ -223,14 +263,20 @@
 
   
     
-
+  <div class="preAndNext">
+    <a href="../works/icebreaker" class="prevNav"><< Prev</a>
+    <div class="clear"></div>
+  </div>
 
   
 
 
 </section>
 
+<footer>
+  
 
+</footer>
 
 
   <script src="../js/lib/retina.min.js"></script>

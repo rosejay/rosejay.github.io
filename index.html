@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properities -->
-  <title>Ye</title>
+  <title>Ye's Stories</title>
   <meta property="og:site_name" content="Ye's Stories">
   <meta property="og:title" content="Ye's Stories">
   <meta property="og:type" content="website">
@@ -21,61 +21,361 @@
 
   <!-- font -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:200,100,400,300,600,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
+  <link rel="stylesheet/less" type="text/css" href="css/mobile.less" />
   <link rel="stylesheet" type="text/css" href="css/base.css">
   <link rel="stylesheet/less" type="text/css" href="css/main.less">
   <link rel="stylesheet/less" type="text/css" href="css/index.less">
 
+  <link rel="stylesheet/less" type="text/css" media="screen and (max-device-width: 1024px)" href="css/mobile-nav.less" />
+
 
   <!-- javascript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="js/lib/bootstrap.min.js"></script>
-  <script src="js/lib/less-1.7.5.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+  <!--<script type="text/javascript" src="js/lib/jquery.mobile-1.4.4.min.js"></script>-->
+  <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lib/less-1.7.5.min.js"></script>
 
   <!-- font -->
-
+<!--
   <script type="text/javascript" src="//use.typekit.net/ksw7gyd.js"></script>
   <style type="text/css">.tk-freight-display-pro{font-family:"freight-display-pro",sans-serif;}</style>
   <link rel="stylesheet" href="http://use.typekit.net/c/3fde45/freight-display-pro:i3:i4:i5:i7:n3:n4:n5:n7.Y2V:P:2,Y2S:P:2,Y2X:P:2,Y2Q:P:2,Y2T:P:2,Y2R:P:2,Y2W:P:2,Y2P:P:2/d?3bb2a6e53c9684ffdc9a9bf01f5b2a62dc1020e61a7e41334f5590cfa9c94d9bf354b54d00ff08bb2e90cb6df604cfec3a61445d503775df2fe81c35b1df5d700fee1029795ec090c66248b00a93c41d01b81c0737c95301e248ab01032b8c8e4d88d4e0115097a6ddb300280cb91babaa34cee6722e3661b42f6d0f0049c5ee27ce73533ca05fe7e5a43398410ddb2f066fc6e46f5f11f125a349aa06a8a9a72d271dd48d">
-
+-->
 
 </head>
-<body >
+<body>
 
   <header>
 
     <div class="row innerContent">
-      <div class="col-md-3 leftHeader">
+      <div class="col-md-4 leftHeader works">
         <img src="assets/avatar.png" class="img-responsive avatar">
         <h1>Ye Lin</h1>
         <p class="slogan"><span class="quotation">“</span> I design and code</p>
-        <p class="slogan">to solve problems</p>
+        <p class="slogan">to <strong>solve</strong> problems</p>
       </div>
-      <div class="col-md-9 rightHeader">
-        <p class="subtitle">Education</p>
+      <div class="col-md-8 rightHeader works">
+        <p class="subtitle index">Education</p>
         <p>MSc in Human Computer Interaction and Design</p>
         <p class="bottom">Double degree at University College London and Université Paris Sud</p>
 
-        <p class="subtitle">UX Design Intern</p>
-        <p>@ <strong>Intel</strong> (London), <strong>INRIA</strong> (Paris), <strong>Alibaba</strong> (Hangzhou), <strong>Douban</strong> (Beijing).</p>
+        <p class="subtitle index">UX Design Intern</p>
+        <p>@ <strong>Intel</strong> (London), <strong>INRIA</strong> (Paris), <strong>Douban</strong> (Beijing), <strong>Alibaba</strong> (Hangzhou).</p>
+      </div>
+      <div class="col-md-4 leftHeader about">
+        <img src="assets/avatar.png" class="img-responsive avatar">
+        <h1>Ye Lin</h1>
+        <p class="slogan">“ I have a passion in </p>
+        <p class="slogan">design and building  </p>
+        <p class="slogan">things that <strong>people</strong> </p>
+        <p class="slogan">can use every day.</p>
+      </div>
+      <div class="col-md-8 rightHeader about">
+        <div class="arrow-left"></div>
+        <p class="statement">I do UX/UI designs and development for responsive webs and mobile apps. I learned XCode and Swift from zero, designed and implemented an <a href="http://yelin.in/works/instano2" target="_blank" class="special">iPhone mobile app</a> in a month. I program to demonstrate my design ideas. I also code to create <a href="http://yelin.in/works/spiro" target="_blank" class="special">visualizations</a> and animations. </p>
+
+        <p class="statement">I was a co-founder of <a href="http://yelin.in/works/talentap" target="_blank">Talentap</a>. We were accepted into an accelerator programme in the UK and raised pre-seed funding and I was offered a Tier 1 (Graduate Entrepreneur) visa endorsed by the UKTI.</p>
+        <p class="statement">I'm from Hangzhou, China, currently living in London, and I'm looking for new challenges anywhere in the world.</p>
+        <p class="statement"><a href="mailto:yelin2018@gmail.com" class="email special">Get in touch</a> if you are interested in working with me!</p>
+      </div>
+    </div>
+  </header>
+
+
+  <section id="works" class="works">
+    
+    <article class="mywork">
+      <a href="works/instano2">
+        <div class="row innerContent">
+          <div class="col-md-4 leftDiv">
+            <h2 class="projProblem">“ How is the air quality there, in these pictures?</h2>
+            <div class="bottomText">
+              <h2 class="projTitle">Making The Invisible Visible</h3>
+              <h3 class="projSubtitle">Visualizing Air Quality In An Understandable Way</h4>
+              <p class="projTime">03/2014 - 09/2014 | MSc Dissertation</p>
+              <p class="projTags">Visualization, Mobile App, Research </p>
+            </div>
+          </div>
+          <div class="col-md-8 rightDiv">
+            <img src="assets/insta/insta-20s.gif" class="img-responsive">
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <article class="mywork">
+      <a href="works/spiro.html">
+        <div class="row innerContent">
+          <div class="col-md-4 leftDiv">
+            <h2 class="projProblem">“ How to turn abstract user generated data to a piece of art?</h2>
+            <div class="bottomText">
+              <h2 class="projTitle">Spirograph Designs</h2>
+              <h3 class="projSubtitle">For Ambient Display of Tweets</h3>
+              <p class="projTime">05/2013-07/2013 | Intern at INRIA</p>
+              <p class="projTags">Casual Visualization, Javascript, Research</p>
+            </div>
+          </div>
+          <div class="col-md-8 rightDiv">
+            <img src="assets/spiro/spiro-01.gif" class="img-responsive">
+          </div>
+        </div>
+      </a>
+    </article>
+
+
+    <article class="mywork">
+      <a href="works/talentap.html">
+        <div class="row innerContent">
+          <div class="col-md-4 leftDiv">
+            <h2 class="projProblem">" Who to hire and where to book a talent for your party/wedding? </h2>
+            <div class="bottomText">
+              <h2 class="projTitle">Talentap</h2>
+              <h3 class="projSubtitle">Reviews and advice on private entertainment talents</h3>
+              <p class="projTime">10/2013 - 03/2013 | Co-Founder</p>
+              <p class="projTags">UX/UI Design, Front-end development </p>
+            </div>
+          </div>
+          <div class="col-md-8 rightDiv">
+            <img src="assets/talentap/talentap-web-03-v2s.jpg" class="img-responsive">
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <article class="mywork">
+      <a href="works/icebreaker.html">
+        <div class="row innerContent">
+          <div class="col-md-4 leftDiv">
+            <h2 class="projProblem">" Feel difficult to start a conversation?</h2>
+            <div class="bottomText">
+              <h2 class="projTitle">Icebreaker</h2>
+              <h3 class="projSubtitle">Start conversations with topics</h3>
+              <p class="projTime">05/2014 | Designed for a startup</p>
+              <p class="projTags">Mobile App Design, UX/UI Design</p>
+            </div>
+          </div>
+          <div class="col-md-8 rightDiv">
+            <img src="assets/ice/ice-06.jpg" class="img-responsive screenshot">
+            <img src="assets/ice/ice-05.jpg" class="img-responsive screenshot">
+          </div>
+        </div>
+      </a>
+    </article>
+
+
+    <article class="mywork">
+      <a href="works/chronic.html">
+        <div class="row innerContent">
+          <div class="col-md-4 leftDiv">
+            <h2 class="projProblem">" Wearable device to motivate chronic pain patients to perform physical activity?</h2>
+            <div class="bottomText">
+              <h2 class="projTitle">Chronic Pain Rehabilitation Assistant</h2>
+              <h3 class="projSubtitle">Activity Motivator based on Affect-in-Motion Recognition</h3>
+              <p class="projTime">01/2014 - 05/2014 | UCLIC</p>
+              <p class="projTags">Affective Interaction, Machine Learning </p>
+            </div>
+          </div>
+          <div class="col-md-8 rightDiv">
+            <iframe class="videoIndex" src="//player.vimeo.com/video/99381749" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+      </a>
+    </article>
+
+
+
+    
+
+    
+
+    
+
+
+<!--
+    
+
+
+    <article class="mywork">
+      <a href="works/eyetracker.html">
+        <div class="row innerContent">
+          <div class="col-md-3 leftDiv">
+            <h2 class="projProblem">“ </h2>
+            <div class="bottomText">
+              <h2 class="projTitle">An Eye-tracking Study</h2>
+              <h3 class="projSubtitle">On Users' Mobile Reading When Sitting And Walking</h3>
+              <p class="projTime">01/2013 - 05/2013 | Université Paris-Sud</p>
+              <p class="projTags">Data Visualization, User Study, Javascript</p>
+            </div>
+          </div>
+          <div class="col-md-9 rightDiv">
+            <img src="assets/eyetracker/eye-01.gif" class="img-responsive">
+          </div>
+        </div>
+      </a>
+    </article>
+-->
+  </section>
+    
+  <section id="about" class="about">
+    <div class="row innerContent">
+      <div class="col-md-4 myCVLeft">
+
+        <p class="smalllabel">Elsewhere</p>
+        <div class="elsewhere">
+          <div class="inner">
+            <a href="https://www.facebook.com/rosejaylin" class="facebook" target="_blank"></a>
+            <a href="http://uk.linkedin.com/in/rosejay/" class="linkedin" target="_blank"></a>
+            <a href="https://www.flickr.com/photos/rosejaylin/" class="flickr" target="_blank"></a>
+            <a href="http://www.douban.com/people/rosejay/" class="douban" target="_blank"></a>
+            <a href="mailto:yelin2018@gmail.com" class="email"></a>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+
+
+        <a href="assets/cv.pdf" download>
+          <h4 class="link center downloadCV">Download CV</h4>
+        </a>
+
+
+      </div>
+      <div class="col-md-8 myCV">
+  
+        <h3 class="first">Education</h3>
+        <ul class="cvList">
+          <li>
+            <h2>MSc in Human Computer Interaction and Design</h2>
+            <h2>Double degree at University College London and Université Paris Sud</h2>
+            <p class="time">2012–2014 | London, UK && Paris, France</p>
+            <p class="smallT">EIT ICT Labs Master’s Program, Full scholarship awarded, Innovation & Entrepreneurship Minor</p>
+            <p class="smallT">Got a distinction in Ergonomics for Design, got the highest marks, 19/20 and 9/10, in practical courseworks in peers</p>
+          </li>
+          <li>
+            <h2>BEng in Digital Media Technology</h2>
+            <h2>Zhejiang University, top 3 university in China</h2>
+            <p class="time">2008–2012 | Hangzhou, China</p>
+            <p class="smallT">GPA: 3.88/4.0 (88.36/100)</p>
+            <p class="smallT">Learning Focus: Interactive Media, Product Design, HCI, Game Entertainment, Web 2.0, Animation</p>
+            <p class="smallT">Excellent Undergraduate of Zhejiang Province (2012), Excellent Undergraduate Thesis of Zhejiang University (2012), National Scholarship from Ministry of Education of the P.R. China (Highest honor for outstanding undergraduates in China, 2011)</p>
+          </li>
+        </ul>
+
+        <hr class="section-divider">
+        <h3>Experience</h3>
+        <ul class="cvList">
+          <li>
+            <h2>UX Designer Intern</h2>
+            <h2>Intel Collaborative Research Institute</h2>
+            <p class="time">June 2014–September 2014 | London, UK</p>
+            <p class="smallT">Carried out up-front research, user interviews, design iterations and user studies about air quality and air quality data visualizations.</p>
+            <p class="smallT">Proposed a photo-based air quality visual representation to visualise air quality data.</p>
+            <p class="smallT">Learned XCode and Swift from zero, designed and implemented an iPhone mobile app in one month to demonstrate my ideas. </p>
+          </li>
+          <li>
+            <h2>Research Intern</h2>
+            <h2>Aviz, INRIA, the best visualization lab in Europe</h2>
+            <p class="time">May 2013–June 2013 | Paris, France</p>
+            <p class="smallT">Worked on casual visualization and explored Spirograph design space, patterns, visual codes, etc. </p>
+            <p class="smallT">Developed an application using customized Spirograph patterns to visualize Tweets time sequential data.</p>
+          </li>
+
+          <li>
+            <h2>UX Designer Intern</h2>
+            <h2>Douban Inc.</h2>
+            <p class="time">June 2012–August 2012 | Beijing, China</p>
+            <p class="smallT">Participated in the UX and UI design of the Douban Movie iPad App</p>
+          </li>
+
+          <li>
+            <h2>UX Designer & Front-end Developer Intern</h2>
+            <h2>R&D, Alibaba Cloud Computing Company</h2>
+            <p class="time">March 2011–May 2012 | Hangzhou, China</p>
+            <p class="smallT">Leaded in the UX/UI design and front-end development of the Cloud Render Platform</p>
+            <p class="smallT">Optimized the process of uploading render jobs, visualized cloud render results and costs </p>
+          </li>
+
+
+        </ul>
+
+
+        <hr class="section-divider">
+        <h3>Publication</h3>
+        <p>Ye Lin, Romain Vuillemot. Spirograph Designs for Ambient Display of Tweets. <em>IEEE VIS 2013 Arts Program proceedings.</em> IEEE VIS 2013, Oct 2013, Atlanta, GA, United States. IEEE</p>
+
+        <hr class="section-divider">
+        <h3>Honors</h3>
+        <p>3rd place at the <strong>IE Venture Days</strong> in June 2014 in London</p>
+        <p>Raised pre-seed funding and got into the <strong>Dotforge</strong> Accelerator in Sheffield, UK</p>
+        <p>Winning Team of <strong>AngelHack</strong>, Hackathon in London</p>
+        <p>Best Entrepreneurial Team, at EIT ICT Labs Summer School, Wellbeing Innovation Camp 2013, at <strong>Philips</strong>, in Eindhoven, Netherlands</p>
+        <p>Student volunteer, <strong>CHI 2013</strong>, Paris</p>
+
+        <hr class="section-divider">
+        <h3>Skills</h3>
+        <p class="b-15"><strong>Design</strong>: Photoshop, Illustrator, Flash, sketching, wireframing, storyboards, innovative thinking, user study, OmniGraffle, Axure, Maya, Motion Builder, After Effects</p>
+        <p><strong>Programming</strong>: JavaScript, HTML5, CSS3, Swift, AS3.0, Processing, OpenCV, OpenGL, C++, Java, MySQL, Python, PHP</p>
+
+        <hr class="section-divider">
+
+        <p class="gray">Only listed a few/most recent works of mine in this portfolio. If you are interested to see more. Please drop me an <a href="mailto:yelin2018@gmail.com" class="special">email</a>. </p>
+
+<!--
+        <hr class="section-divider">
+
+        <a href="#" class="arrow center"></a>
+-->
+
       </div>
     </div>
 
-    
+
 
         
+
+  </section>
     
 
-    
-  </header>
+  <nav id="nav">
+    <ul>
+      <li id="aboutBtn"><a href="#">About</a></li>
+      <li id="worksBtn"><a href="#">Works</a></li>
+    </ul>
+  </nav>
 
+
+  <a href="#" class="arrow center"></a>
+
+  <footer>
+    <ul>
+      <li>
+        <p><a href="mailto:yelin2018@gmail.com" class="special">Email me</a></p>
+      </li>
+      <li class="dotdot">·</li>
+      <li><p><a href="http://yelin.in">© 2014 yelin.in</a></li>
+      <li class="dotdot">·</li>
+      <li><p>v2</p></li>
+
+    </ul>
+  </footer>
+  
+
+  <section >
+    
+
+
+
+  </section>
 
 
   <script src="js/lib/retina.min.js"></script>
   <script src="js/main.js"></script>
 
+<!--
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -90,7 +390,7 @@
     document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F58fa39e2977ba41842185b83d5731cc5' type='text/javascript'%3E%3C/script%3E"));
     </script>
 
-
+-->
   </div>
 </body>
 </html>

@@ -204,7 +204,12 @@ p.date{
 	position: absolute;
 }
 
-
+#waitingText{
+	margin: 20% 0;
+	text-align: center;
+	font-size: 18px;
+	color: #aaa;
+}
 
 
 

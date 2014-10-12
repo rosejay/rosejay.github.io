@@ -13,10 +13,10 @@
 	}
 }
 
-
+@mainColor: #ec3f4a;
 .workDetail{
 
-	margin: 8% auto;
+	
 	
 		/*
 		position: relative;
@@ -52,7 +52,6 @@
 			font-weight: 200;
 			line-height: 30px;
 			color: #aaa;
-			margin-bottom: 8%;
 		}
 
 		h5{
@@ -105,10 +104,13 @@
 
 	.workImages{
 		padding: 4% 0;
-		margin: 0 -100px 0 -200px;
 		img{
 			float: left;
 		}
+		img.w-230{
+			width: 230px;
+		}
+
 	}
 
 	.workDescription{
@@ -119,30 +121,45 @@
 				font-weight: 600;
 			}
 		}
-		p.gray{
+		p.question{
+			font-weight: 200;
+			line-height: 1.2;
+			border-left: 3px solid rgba(0,0,0,0.8);
+		}
+		p.quote{
+			font-size: 22px;
+			font-weight: 200;
+			line-height: 1.2;
+			font-style: italic;
+			border-left: 3px solid rgba(0,0,0,0.8);
+			margin-top: 15px;
+		}
+		p.important{
+			font-size: 22px;
+		}
+		p.graysmall{
 			color: #aaa;
+			font-size: 14px;
+			margin-bottom: 30px;
+		}
+		p.ref{
+			font-size: 10px;
+			color: #aaa;
+			margin-bottom: 3px;
 		}
 		img{
 			width: 100%;
 			height: auto;
 			margin-bottom: 15px;
 		}
-		img.smallImage{
-			width: 150px;
-			float: left;
-			margin-right: 2px;
-		}
 		.three{
-			float: left;
 			margin-right: 5px;
-			width: 200px;
 		}
 		.two{
 			width: 300px;
 		}
 		.imageWithCaption{
-			float: left;
-			margin-bottom: 30px;
+			
 			img{
 				margin-bottom: 10px;
 			}
@@ -151,18 +168,15 @@
 			}
 			.appDesign{
 				position: relative;
-				height: 355px;
 				margin-bottom: 10px;
 				img{
 					margin-bottom: 0;
 				}
 				.top{
 					width: 100%;
-					height: 40px;
 				}
 				.body{
 					width: 100%;
-					height: 315px;
 					overflow-y: scroll;
 				}
 				.bottom{
@@ -174,10 +188,10 @@
 			}
 		}
 		h3{
-			font-size: 22px;
+			font-size: 24px;
 			display: inline-block;
 			font-weight: bold;
-			line-height: 36px;
+			line-height: 1.2;
 			margin-bottom: 15px;
 		}
 		p{
@@ -228,33 +242,26 @@
 			font-weight: 200;
 			font-size: 18px;
 			font-style: italic;
-			line-height: 1;
+			line-height: 1.2;
 			color: #000;
 			z-index: 300;
-			margin-bottom: 4%;
+			margin-bottom: 6%;
 			/*font-family: "freight-display-pro", serif;*/
 		}
 
-		hr.section-divider {
-			display: block;
-			width: 15%;
-			margin: 8% auto 8% 0;
-			border: 0;
-			border-top: 1px solid rgba(0,0,0,0.15);
-		}
+		
 		.paragraph{
-			margin-bottom: 10%;
 			position: relative;
 		}
 
 		h4{
-			font-size: 16px;
-			background: #333;
+			font-size: 12px;
+			background: @mainColor;
 			color: #fff;
 			font-weight: 200;
 			display: inline-block;
 			text-transform: uppercase;
-			padding: 2px;
+			letter-spacing: 0.1em;
 		}
 
 	}

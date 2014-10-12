@@ -89,8 +89,9 @@ function generateTimeStr(month, day, hour, minute){
 
 
 // get CHI data
-$.getJSON('http://bcs.duapp.com/portfolio/assets/chi2013.json', function(data) {
+$.getJSON('js/chi2013.json', function(data) {
 
+	$("#waitingText").css("display", "none");
 	var items = [];
 	var hasId = [];
 	var idCount = 0;
