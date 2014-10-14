@@ -28,6 +28,8 @@
   <link rel="stylesheet" type="text/css" href="../css/lib/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/base.css">
   <link rel="stylesheet/less" type="text/css" href="../css/mobile.less" />
+  <link rel="stylesheet/less" type="text/css" href="../css/mobile-nav.less" />
+
   <link rel="stylesheet/less" type="text/css" href="../css/main.less">
   <link rel="stylesheet/less" type="text/css" href="../css/work.less">
 
@@ -61,14 +63,20 @@
     </div>
       
     <div class="workImages">
-      <img src="../assets/spiro/spiro-01.png" class="img-responsive">
+      <img src="../assets/spiro/spiro-01.png" class="img-responsive desktop">
+      <img src="../assets/spiro/spiro-06s.jpg" class="img-responsive mobile">
       <div class="clear"></div>
     </div>
 
     <article class="workDescription">
 
+        <hr class="section-divider desktop">
 
-        <hr class="section-divider">
+        <div class="paragraph desktop">
+          <a href="../demos/spirograph" target="_blank"><h4>DEMO (Web Only)</h4></a>
+        </div>
+
+        <hr class="section-divider desktop">
 
         <div class="paragraph">
           <p class="small">05/2013 - 07/2013</p>
@@ -91,14 +99,14 @@
         <div class="paragraph">
           <iframe style="margin-bottom: 4%" src="//player.vimeo.com/video/74122568" class="videoIndex" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-          <a href="../demos/spirograph" target="_blank"><h4>DEMO (Web Only)</h4></a>
+          
 
         </div>
 
         <hr class="section-divider">
 
         <div class="paragraph">
-          <p class="question">People are generating tons of data everyday from Facebook, Twitter, iMessages, etc. How to turn these abstract data to a piece of art for ambient display? </p>
+          <p class="question">People are generating tons of data everyday from Facebook, Twitter, iMessages, etc. How to turn these user generated abstract data to a piece of art for ambient display? </p>
         </div>
 
         <hr class="section-divider">
@@ -138,9 +146,9 @@
           <figcaption class="imageCaption">Left: preview or result, Right: parameters for one Spirograph (one line) and their composition (by selecting multiple lines).</figcaption>
         </div>
 
-        <h3>High Resolution Results</h3>
+        <h3 class="desktop">High Resolution Results</h3>
 
-        <div class="paragraph">
+        <div class="paragraph desktop">
           <a href="../assets/spiro/spiro5.jpg" target="_blank">
             <img src="../assets/spiro/spiro-gif-1.gif" class="smallImage">
           </a>
@@ -157,10 +165,10 @@
           <figcaption class="imageCaption">Click to view.</figcaption>
         </div>
 
-        <hr class="section-divider">
+        <hr class="section-divider desktop">
 
-        <div class="paragraph">
-          <a href="../demos/spirograph" target="_blank"><h4>DEMO (Web Only)</h4></a>
+        <div class="paragraph desktop">
+          <a href="../demos/spirograph" target="_blank" ><h4 class="link">DEMO (Web Only)</h4></a>
         </div>
 
         <hr class="section-divider">
@@ -174,23 +182,13 @@
         </div>
 
         <hr class="section-divider">
-        <div class="paragraph">
-          <a href="#" class="arrow center"></a>
-        </div>
-
       </article>
   </div>
     
   
   
 
-  <div class="preAndNext">
-    <a href="../works/instano2" class="prevNav"><< Prev</a>
-    <a href="../works/talentap" class="nextNav">Next >></a>
-    <div class="clear"></div>
-  </div>
-    
-
+  
   
 
 
@@ -204,10 +202,38 @@
 </section>
 
 
+<div class="preAndNext" id="prev">
+  <a href="../works/talentap" class="nextNav">Next >><p>Talentap</p></a>
+  <a href="../works/instano2" class="prevNav"><< Prev <p>InstaNO2</p></a>
+  <div class="clear"></div>
+</div>
+  
+<nav id="nav" class="worksPage">
+  <ul>
+    <li id="worksBtn" style="display:block"><a href="../">Works</a></li>
+    <li id="aboutBtn"><a href="../about">About</a></li>
+  </ul>
+</nav>
+
+
+<a href="#" class="arrow center"></a>
+<footer>
+  <ul>
+    <li>
+      <p><a href="mailto:yelin2018@gmail.com" class="special">Email me</a></p>
+    </li>
+    <li class="dotdot">·</li>
+    <li><p><a href="http://yelin.in">© 2014 yelin.in</a></li>
+    <li class="dotdot">·</li>
+    <li><p>v2</p></li>
+
+  </ul>
+</footer>
 
 
   <script src="../js/lib/retina.min.js"></script>
   <script src="../js/main.js"></script>
+
 
   <div style="display:none">
     <script>
@@ -223,6 +249,6 @@
     document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F58fa39e2977ba41842185b83d5731cc5' type='text/javascript'%3E%3C/script%3E"));
     </script>
   </div>
-
+  
 </body>
 </html>

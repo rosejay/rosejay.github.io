@@ -26,7 +26,8 @@
 	.innerContent{
 		width: @mainWidth;
 	}
-	.mywork{
+	
+	.mywork, .mydemo{
 		width: @mainWidth;
 		padding: 8% 0;
 		.innerContent{
@@ -64,6 +65,13 @@
 			height: 400px;
 		}
 	}
+
+	.mydemo{
+		.innerContent{
+			height: 150px;
+		}
+	}
+
 	p.subtitle{
 		text-align: left;
 	}
@@ -102,7 +110,10 @@
 	}
 	.workDetail{
 		margin: 8% auto;
-
+		h2.projTitle{
+			font-size: 48px;
+			line-height: 56px;
+		}
 		h3.projSubtitle{
 			margin-bottom: 8%;
 		}
@@ -162,34 +173,56 @@
 	hr.section-divider {
 		margin: 8% auto 8% 0;
 	}
-
+	@prevHeight: 60px;
 	// prev && next
 	.preAndNext{
 		width: 100%;
 		position: fixed;
-		top: 75%;
-		height: 100px;
+		bottom: 2%;
+		height: @prevHeight;
 		z-index: 100;
 		.prevNav, .nextNav{
 			position: absolute;
 			display: block;
-			width: 51px;
+			width: @prevHeight;
 			height: 100%;
 			text-indent: -7727px;
+			p{
+				color: #999;
+				position: relative;
+				width: 120px;
+				height: 18px;
+				line-height: 18px;
+				display: none;
+				-webkit-transition: display 0.2s; /* For Safari 3.1 to 6.0 */
+    			transition: display 0.2s;
+			}
 		}
 		.prevNav{
-			left: 4%;
-			.at2x('../assets/prev.png', 51px, 100px);
+			left: 0;
+			.at2x('../assets/prev.png', @prevHeight, @prevHeight);
+			p{
+				text-indent: 45px;
+			}
 		}
 		.prevNav:hover{
-			.at2x('../assets/prev-hover.png', 51px, 100px);
+			.at2x('../assets/prev-hover.png', @prevHeight, @prevHeight);
+			p{
+				//display: block;
+			}
 		}
 		.nextNav{
-			right: 4%;
-			.at2x('../assets/next.png', 51px, 100px);
+			right: 0;
+			.at2x('../assets/next.png', @prevHeight, @prevHeight);
+			p{
+				text-indent: -40px;
+			}
 		}
 		.nextNav:hover{
-			.at2x('../assets/next-hover.png', 51px, 100px);
+			.at2x('../assets/next-hover.png', @prevHeight, @prevHeight);
+			p{
+				//display: block;
+			}
 		}
 	}
 		
@@ -201,18 +234,46 @@
 		margin: 8% auto;
 	}
 
+
+
 	nav{
+		position: fixed;
 		right: 0;
 		top: 0;
+		padding: 15px 10px;
+
+		ul{
+			li{
+				text-align: right;
+				float: right;
+				height: 44px;
+				a{
+					display: inline-block;
+					text-transform: uppercase;
+					font-size: 12px;
+					line-height: 44px;
+					color: #999;
+					padding: 0 15px;
+					letter-spacing: 0.1em;
+					background: rgba(255,255,255,0.96);
+				}
+				a:hover{
+					color: #999;
+					background: #fff;
+				}
+			}
+		}
 	}
 
 	.mobile{
-		display: none;
+		display: none !important;
 	}
 	.desktop{
-		display: block;
+		display: block !important;
 	}
-	
+	#demos{
+		display: block !important;
+	}
 		
 }
 @media screen and (max-width: @mainWidth) {
@@ -223,7 +284,7 @@
 	.innerContent{
 		width: 100%;
 	}
-	.mywork{
+	.mywork, .mydemo{
 		width: 100%;
 		padding: 12% 0;
 		.innerContent{
@@ -317,8 +378,12 @@
 	.workDetail{
 		margin: 12% auto;
 		.workSummary {
-			h2.projTitle.chronic{
+			padding: 0 15px;
+			h2.projTitle{
+				font-size: 40px;
+				line-height: 48px;
 			}
+
 		}
 		h3.projSubtitle{
 			margin-bottom: 12%;
@@ -326,12 +391,13 @@
 		.innderSection{
 			max-width: (@sectionWidth + 30px);
 			width: 100%;
-			padding: 15px;
+			padding: 15px 0;
 		}
 		.workImages{
 			margin: 0;
 		}
 		.workDescription{
+			padding: 0 15px;
 			p.question{
 				padding-left: 15px;
 				font-size: 24px;
@@ -378,6 +444,7 @@
 	}
 
 	// prev && next
+	/*
 	.preAndNext{
 		max-width: (@sectionWidth + 30px);
 		width: 100%;
@@ -389,6 +456,9 @@
 			display: block;
 			height: 100%;
 			background: #fff;
+			p{
+				display: none;
+			}
 		}
 		.prevNav:hover, .nextNav:hover{
 			background: #fff;
@@ -400,7 +470,60 @@
 			float: right;
 		}
 	}
-	
+	*/
+	@prevHeight: 60px;
+	// prev && next
+	.preAndNext{
+		width: 100%;
+		position: fixed;
+		bottom: 2%;
+		height: @prevHeight;
+		z-index: 100;
+		.prevNav, .nextNav{
+			position: absolute;
+			display: block;
+			width: @prevHeight;
+			height: 100%;
+			text-indent: -7727px;
+			p{
+				color: #999;
+				position: relative;
+				width: 120px;
+				height: 18px;
+				line-height: 18px;
+				display: none;
+				-webkit-transition: display 0.2s; /* For Safari 3.1 to 6.0 */
+    			transition: display 0.2s;
+			}
+		}
+		.prevNav{
+			left: 0;
+			.at2x('../assets/prev.png', @prevHeight, @prevHeight);
+			p{
+				text-indent: 45px;
+			}
+		}
+		.prevNav:hover{
+			.at2x('../assets/prev-hover.png', @prevHeight, @prevHeight);
+			p{
+				//display: block;
+			}
+		}
+		.nextNav{
+			right: 0;
+			.at2x('../assets/next.png', @prevHeight, @prevHeight);
+			p{
+				text-indent: -40px;
+			}
+		}
+		.nextNav:hover{
+			.at2x('../assets/next-hover.png', @prevHeight, @prevHeight);
+			p{
+				//display: block;
+			}
+		}
+	}
+
 	#about{
 		max-width: (@sectionWidth + 30px);
 		width: 100%;
@@ -414,20 +537,51 @@
 		margin: 12% auto;
 	}
 	nav{
+		position: fixed;
 		right: 0;
 		top: 0;
+		padding: 15px 10px;
+		width: 80px;
+		ul{
+			li{
+				float: right;
+				text-align: right;
+				height: 44px;
+				a{
+					display: inline-block;
+					text-transform: uppercase;
+					font-size: 12px;
+					line-height: 44px;
+					color: #999;
+					padding: 0 15px;
+					background: rgba(255,255,255,0.96);
+					letter-spacing: 0.1em;
+				}
+				a:hover{
+					color: #999;
+					background: #fff;
+				}
+			}
+		}
 	}
 
+
+	
+
+
 	.mobile{
-		display: block;
+		display: block !important;
 	}
 	.desktop{
-		display: none;
+		display: none !important;
+	}
+	#demos{
+		display: none !important;
 	}
 
 }
 
-@media screen and (max-width: @sectionWidth) {
+@media screen and (max-width: (@sectionWidth + 100px)) {
 
 	header{
 		.rightHeader.about{
@@ -442,7 +596,7 @@
 		}
 	}
 
-	.mywork{
+	.mywork, .mydemo{
 		h2.projProblem{
 			padding: 0 15px;
 		}
@@ -453,10 +607,108 @@
 			}
 		}
 	}
+
 	nav{
+		position: fixed;
 		right: 0;
 		bottom: 0;
 		top: auto;
+		padding: 0;
+		ul{
+			li{
+				height: 44px;
+				a{
+					display: inline-block;
+					text-transform: uppercase;
+					font-size: 12px;
+					line-height: 44px;
+					color: #999;
+					background: rgba(255,255,255,0.96);
+					padding: 0 15px;
+					letter-spacing: 0.1em;
+				}
+				a:hover{
+					color: #999;
+					background: #fff;
+				}
+			}
+		}
+	}
+	.workImages{
+		padding: 0;
+
+	}
+	// prev && next
+	.preAndNext{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(255,255,255,0.96);
+		border-top: 1px solid @borderGrey;
+
+		width: 100%;
+		height: 44px;
+		z-index: 100;
+		margin: 0 auto;
+		padding: 0;
+		.prevNav, .nextNav{
+			position: relative;
+			right: auto;
+			left: auto;
+			width: auto;
+			height: 100%;
+			text-indent: 0;
+			text-align: center;
+			border-left: 1px solid @borderGrey;
+			line-height: 44px;
+			float: right !important;
+			display: inline-block;
+			padding: 0 10px;
+			height: 100%;
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			background: rgba(255,255,255,0);
+			p{
+				display: none;
+			}
+		}
+		.prevNav:hover, .nextNav:hover{
+			background: rgba(255,255,255,0);
+			p{
+				display: none;
+			}
+		}
+		.prevNav{
+		}
+		.nextNav{
+		}
+	}
+	nav.worksPage{
+		z-index: 110;
+		position: fixed;
+		padding: 0;
+		bottom: 0 ;
+		top: auto;
+		left: 0;
+		height: 44px;
+		width: 160px;
+		ul{
+			li{
+				float: left;
+				a{
+					padding: 0 10px;
+					color: #333;
+					background: rgba(255,255,255,0);
+					border: 0;
+					border-left: 1px solid @borderGrey;
+				}
+			}
+		}
+	}
+	html{
+		padding-bottom: 44px;
 	}
 }
 
@@ -489,7 +741,7 @@
 
 		}
 	}
-	.mywork{
+	.mywork, .mydemo{
 		.videoIndex{
 			height: 200px;
 		}
@@ -501,7 +753,7 @@
 
 @media screen and (max-width: 1100px) and (min-width: @mainWidth) {
 
-	.mywork{
+	.mywork, .mydemo{
 		h2.projProblem{
 			margin: 0;
 		}

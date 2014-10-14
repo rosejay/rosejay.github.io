@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 
+
 	$('#aboutBtn').click(function(){
 		$('#aboutBtn').fadeOut(0);
 		$('.about').fadeIn(0);
@@ -28,6 +29,7 @@ $(document).ready(function() {
 		document.addEventListener("scroll", Scroll, false);
 
 		function ScrollStart() {
+			$('#prev').fadeOut(0);
 			$('#nav').fadeOut(0);
 		}
 
@@ -35,6 +37,7 @@ $(document).ready(function() {
 		    //end of scroll event for iOS
 		    //and
 		    //start/end of scroll event for other browsers
+		    $('#prev').fadeIn(500);
 		    $('#nav').fadeIn(500);
 		}
 
@@ -44,10 +47,12 @@ $(document).ready(function() {
 
 		$(window).scroll(function() {
 		    clearTimeout($.data(this, 'scrollTimer'));
-		    $('#nav').fadeOut(100);
+		    $('#prev').fadeOut(0);
+		    $('#nav').fadeOut(0);
 		    $.data(this, 'scrollTimer', setTimeout(function() {
 		        // do something
-		        $('#nav').fadeIn(100);
+		        $('#nav').fadeIn(500);
+		        $('#prev').fadeIn(500);
 		    }, 500));
 		});
 	}

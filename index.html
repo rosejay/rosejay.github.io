@@ -18,7 +18,6 @@
   <link rel="image_src" href="" />
 
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-
   <!-- font -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:200,100,400,300,600,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
@@ -53,8 +52,10 @@
 
     <div class="row innerContent">
       <div class="col-md-4 leftHeader works">
-        <img src="assets/avatar.png" class="img-responsive avatar">
-        <h1>Ye Lin</h1>
+        <a href="http://yelin.in">
+          <img src="assets/avatar.png" class="img-responsive avatar">
+          <h1>Ye Lin</h1>
+        </a>
         <p class="slogan"><span class="quotation">“</span> I design and code</p>
         <p class="slogan">to <strong>solve</strong> problems</p>
       </div>
@@ -67,8 +68,10 @@
         <p>@ <strong>Intel</strong> (London), <strong>INRIA</strong> (Paris), <strong>Douban</strong> (Beijing), <strong>Alibaba</strong> (Hangzhou).</p>
       </div>
       <div class="col-md-4 leftHeader about">
-        <img src="assets/avatar.png" class="img-responsive avatar">
-        <h1>Ye Lin</h1>
+        <a href="http://yelin.in">
+          <img src="assets/avatar.png" class="img-responsive avatar">
+          <h1>Ye Lin</h1>
+        </a>
         <p class="slogan">“ I have a passion in </p>
         <p class="slogan">design and building  </p>
         <p class="slogan">things that <strong>people</strong> </p>
@@ -85,7 +88,30 @@
     </div>
   </header>
 
+  <section id="demos" >
+    <article class="mydemo">
+      
+      <div class="row innerContent">
+        <a href="/demos/spirograph" target="_blank" >
+          <div class="col-md-4 leftDiv">
+            <h1>Spirograph Designs</h1>
+            <h4 class="link">View Demo (Web Only)</h4></a>
+          </div>
 
+          <div class="col-md-8 rightDiv">
+            <div class="paragraph">
+              <img src="assets/spiro/spiro-gif-final-NEW.gif" class="img-responsive">
+              <div class="clear"></div>
+            </div>
+
+          </div>
+        </a>
+      </div>
+    </article>
+      
+      
+
+  </section>
   <section id="works" class="works">
     
     <article class="mywork">
@@ -102,7 +128,11 @@
             </div>
           </div>
           <div class="col-md-8 rightDiv">
-            <img src="assets/insta/insta-20s.gif" class="img-responsive">
+            <iframe class="videoIndex" src="//player.vimeo.com/video/108913659" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+            <!--<img src="assets/insta/insta-final-t.jpg" class="img-responsive">-->
+            <!--<img src="assets/insta/insta-20s.gif" class="img-responsive">-->
+            
           </div>
 
           <div class="col-md-4 leftDiv mobile">
@@ -413,18 +443,10 @@
   </footer>
   
 
-  <section >
-    
-
-
-
-  </section>
-
-
   <script src="js/lib/retina.min.js"></script>
   <script src="js/main.js"></script>
 
-    
+
   <div style="display:none">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -439,5 +461,7 @@
     document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F58fa39e2977ba41842185b83d5731cc5' type='text/javascript'%3E%3C/script%3E"));
     </script>
   </div>
+
+  
 </body>
 </html>
