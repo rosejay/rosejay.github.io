@@ -63,7 +63,7 @@ div{display: block;}
 .br3{-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
 strong{font-weight: bold;}
 ::selection {
-	background: #fff687;
+	background: #eee;
 }
 
 /* height */
