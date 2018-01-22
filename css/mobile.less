@@ -22,11 +22,11 @@
 
 @media screen and (min-width: @mainWidth) {
 
-	
+
 	.innerContent{
 		width: @mainWidth;
 	}
-	
+
 	.mywork, .mydemo{
 		width: @mainWidth;
 		padding: 8% 0;
@@ -84,36 +84,7 @@
 	}
 
 	header{
-		margin: 8% auto;
-		h1{
-			margin-bottom: 8%;
-		}
-		.avatar{
-			margin: 0 auto 8%;
-		}
-		.leftHeader, .rightHeader{
-			margin: 0 auto;
-		}
-		.rightHeader{
-			margin-top: 10px;
-			.arrow-left {
-				left: -20px;
-				top: 50%;
-				margin-top: -20px;
-				border-top: 20px solid transparent;
-				border-bottom: 20px solid transparent; 
-				border-right:20px solid @borderGrey; 
-			}
-			.about{
-				margin-left: -15px;
-				padding: 30px;
-			}
-		}
-		.rightHeader.about{
-			margin-top: 0;
-			margin-left: -15px;
-			padding: 30px;
-		}
+		margin: 8% auto 2%;
 	}
 	.workDetail{
 		margin: 8% auto;
@@ -124,7 +95,7 @@
 		h3.projSubtitle{
 			margin-bottom: 8%;
 		}
-		.innderSection{
+		.innerSection{
 			width: @sectionWidth;
 		}
 		.workImages{
@@ -136,7 +107,7 @@
 				font-size: 32px;
 			}
 			p.quote{
-				padding-left: 30px;
+				padding-left: 10px;
 			}
 			.imageWithCaption{
 				float: left;
@@ -169,7 +140,7 @@
 			h4{
 				padding: 15px 20px;
 			}
-			
+
 			.paragraph{
 				margin-bottom: 8%;
 			}
@@ -232,45 +203,18 @@
 			}
 		}
 	}
-		
+
 	#about{
 
 	}
-	
+
 	footer{
 		margin: 8% auto;
 	}
 
 
 
-	nav{
-		position: fixed;
-		right: 0;
-		top: 0;
-		padding: 15px 10px;
 
-		ul{
-			li{
-				text-align: right;
-				float: right;
-				height: 44px;
-				a{
-					display: inline-block;
-					text-transform: uppercase;
-					font-size: 12px;
-					line-height: 44px;
-					color: #999;
-					padding: 0 15px;
-					letter-spacing: 0.1em;
-					background: rgba(255,255,255,0.96);
-				}
-				a:hover{
-					color: #999;
-					background: #fff;
-				}
-			}
-		}
-	}
 
 	.mobile{
 		display: none !important;
@@ -281,11 +225,11 @@
 	#demos{
 		display: block;
 	}
-		
+
 }
 @media screen and (max-width: @mainWidth) {
 
-	
+
 
 
 	.innerContent{
@@ -343,7 +287,7 @@
 			display: block;
 			.at2x('../assets/question.png', 44px, 44px);
 		}
-		
+
 	}
 	p.subtitle.index{
 		text-align: center;
@@ -358,28 +302,6 @@
 		}
 		.avatar{
 			margin: 0 auto 4%;
-		}
-		.leftHeader{
-			margin-bottom: 12%;
-		}
-
-		.rightHeader{
-			p{
-				text-align: center;
-			}
-			.arrow-left {
-				margin-left: -20px;
-				top: -20px;
-				left: 50%;
-				border-left: 20px solid transparent;
-				border-right: 20px solid transparent; 
-				border-bottom: 20px solid @borderGrey; 
-			}
-			
-		}
-		.rightHeader.about{
-			margin: 0 15px;
-			padding: 30px ;
 		}
 	}
 
@@ -396,7 +318,7 @@
 		h3.projSubtitle{
 			margin-bottom: 12%;
 		}
-		.innderSection{
+		.innerSection{
 			max-width: (@sectionWidth + 30px);
 			width: 100%;
 			padding: 15px 0;
@@ -411,7 +333,7 @@
 				font-size: 24px;
 			}
 			p.quote{
-				padding-left: 15px;
+				padding-left: 5px;
 			}
 			.three{
 				max-width: 320px;
@@ -440,7 +362,7 @@
 			h4{
 				padding: 15px 20px;
 			}
-			
+
 			.paragraph{
 				margin-bottom: 12%;
 			}
@@ -574,7 +496,7 @@
 	}
 
 
-	
+
 
 
 	.mobile{
@@ -590,6 +512,12 @@
 }
 
 @media screen and (max-width: (@sectionWidth + 100px)) {
+
+
+
+
+
+
 
 	header{
 		.rightHeader.about{
@@ -668,9 +596,7 @@
 			height: 100%;
 			text-indent: 0;
 			text-align: center;
-			border-left: 1px solid @borderGrey;
 			line-height: 44px;
-			float: right !important;
 			display: inline-block;
 			padding: 0 10px;
 			height: 100%;
@@ -691,6 +617,7 @@
 		.prevNav{
 		}
 		.nextNav{
+			float: right !important;
 		}
 	}
 	nav.worksPage{
@@ -755,8 +682,8 @@
 		}
 	}
 
-	
-		
+
+
 }
 
 @media screen and (max-width: 1100px) and (min-width: @mainWidth) {
@@ -769,5 +696,3 @@
 
 
 }
-	
-

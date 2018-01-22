@@ -3,8 +3,12 @@ h1, h2, h3, h4, h5, h6, pre, code,
 form, fieldset, legend, input, button,
 textarea, p, blockquote, th, td, menu{margin:0;padding:0;}
 html{overflow-y:scroll}
-body,button,input,select,textarea{ font:14px/1.5 "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-line-height: 1.5;font-weight: 200; color: #333;}
+
+body,button,input,select,textarea{ font:14px/1.5 "Karla", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+line-height: 1.5;font-weight: 200; color: #494949; -webkit-font-smoothing: antialiased;}
+.serif{
+	font-family: Vollkorn, Georgia, serif;
+}
 iframe{border:0;margin:0;padding:0;}
 img, fieldset{border:0;}
 cite,em,strong,th{font-style:inherit;font-weight:inherit;}
@@ -98,11 +102,3 @@ strong{font-weight: bold;}
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:    #ccc;
 }
-
-
-
-
-
-
-
-

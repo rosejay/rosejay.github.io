@@ -12,11 +12,11 @@
   <meta property="og:title" content="Ye's Stories">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://yelin.in/">
-  <meta property="og:description" content="">
-  <meta property="og:image" content="">
-  <meta name="thumbnail" content="" >
+  <meta property="og:description" content="Ye Lin (林晔)'s portfolio'">
+  <meta property="og:image" content="../assets/0.jpg">
+  <meta name="thumbnail" content="../assets/0.jpg" >
+  <link rel="image_src" href="../assets/0.jpg" >
   <meta name="format-detection" content="telephone=no">
-  <link rel="image_src" href="" />
 
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
 
@@ -37,12 +37,12 @@
 
 </head>
 <body>
-  
+
 
 <section class="workDetail">
-  
-  <div class="innderSection">
-    
+
+  <div class="innerSection">
+
     <div class="workSummary">
 
       <h2 class="projTitle chronic">Chronic Pain Rehabilitation Assistant</h3>
@@ -78,24 +78,24 @@
         </div>
 
         <hr class="section-divider">
-        
+
         <div class="paragraph">
           <h3>The Problem</h3>
           <p>Chronic pain (CP) patients suffer from physical, psychological, and emotional problems, such as <strong>fear of movement and (re)injury, low self-efficacy</strong>, the amplification of pain signals in the nervous system, etc [1]. Protective behaviours, such as guarding oneself and avoiding painful movements, are observed in people with CP, which decrease the benefit of physical activity and may lead to loss of mobility.</p>
           <p>Technologies are used for addressing this issue. Needs and barriers for CP patients and physiotherapists are analysed to help develop technology to support physical activities [4]. Audio feedback is used for motivating CP patients doing reaching forward exercise [1]. Supervised machine learning is used for automatic recognition of guarding behaviours based on motion capture data[2]. However, there are some hurdles in introducing technology for home rehabilitation, as whole body motion capture suit is unaffordable and difficult to wear by CP patients.</p>
         </div>
 
-        
+
         <div class="paragraph">
           <h3>Crowdsourcing Labelling</h3>
           <p>The motion segments of the reaching forward exercise from [5] were used the data set for this study, which have 19 people with low-back chronic pain (CLBP) doing physical activities while wearing an Inertial Measuring Unit (IMU) whole-body motion capture suit.</p>
-          
+
           <p>The avatar clips of patients doing the reaching forward exercise, which were generated from the BVH data, were segmented. Avatar clips were used due to ethical issues and to eliminate labelling bias from other modalities, such as facial expression. A crowdsourcing platform, CrowdFlower, was used to do the <strong>confidence</strong> labelling in three categories, high, medium or low confidence. </p>
           <p>Self-efficacy is defined as one’s confidence in overcoming barriers to perform a behaviour [8]. It is a more important factor of disability than other factors such as fear of avoidance, movement and (re)injury, for CP patients. As the crowdsourcing platform was used to do the labelling, the word "confidence" is easier to be understood by people. Thus, the affective state, confidence, was chosen. </p>
         </div>
-        
 
-        
+
+
         <div class="paragraph">
           <h3>Example of a LOW confidence avatar clip</h3>
           <img src="../assets/chronic/chronic-01.gif" class="img-responsive two">
@@ -114,14 +114,14 @@
           <img src="../assets/chronic/pain-01s.png" class="img-responsive">
           <figcaption class="imageCaption">Features via observation: straight spine, straight legs; bending elbows, bending arms; bending knees; shoulder lean/rotation.</figcaption>
           <p>Based on literature review and observations on these labelled avatar clips, the following features were analysed: bending spine, bending head, bending knees, bending elbows, azimuthal shoulder rotation, the duration of time leaning forward, duration of arms away from the body, and quantity of movement (vibration).</p>
-          
+
         </div>
-        
+
         <div class="paragraph">
           <img src="../assets/chronic/pain-02.png" class="two img-responsive">
           <p>Based on the above features, the angles between the 13 representative vectors and the horizontal plane were analysed.</p>
         </div>
-        
+
 
         <div class="paragraph">
           <img src="../assets/chronic/pain-03s.png" class="img-responsive">
@@ -183,7 +183,7 @@
           <img src="../assets/chronic/pain-12.png" class="img-responsive">
           <img src="../assets/chronic/pain-13.png" class="img-responsive">
         </div>
-        
+
         <div class="paragraph">
           <h3>Positioning of Accelerometers</h3>
           <img src="../assets/chronic/pain-15s.png" class="img-responsive" >
@@ -250,12 +250,12 @@
         <hr class="section-divider">
       </article>
   </div>
-    
-  
 
 
 
-  
+
+
+
 
 
 
@@ -270,7 +270,7 @@
 
     <div class="clear"></div>
   </div>
-    
+
   <nav id="nav" class="worksPage">
     <ul>
       <li id="worksBtn" style="display:block"><a href="../">Works</a></li>
@@ -291,7 +291,7 @@
 
     </ul>
   </footer>
-  
+
   <script src="../js/lib/retina.min.js"></script>
   <script src="../js/main.js"></script>
 
